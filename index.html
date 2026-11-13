@@ -135,6 +135,7 @@ form{position:relative}
 .f-done .btn{justify-content:center;margin-top:4px}
 .f-err{background:#FEF2F2;border:1.5px solid #FECACA;color:#B91C1C;border-radius:12px;padding:12px;font-size:14px}
 #f-btn[disabled]{opacity:.6;cursor:wait}
+[hidden]{display:none!important}
 footer{background:#141416;color:#9A9AA0;padding:30px 0;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 .wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.2);z-index:60}
@@ -156,7 +157,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
  .slide .wrap{justify-content:flex-end;padding-bottom:84px}
  .h-arrows{display:none}
  .credit{top:auto;bottom:8px}
- .slide.illus::after{background:linear-gradient(0deg,rgba(29,29,31,.85) 0,rgba(29,29,31,.4) 55%,rgba(29,29,31,0) 80%)}
+ .slide.illus{background:#1D1D1F}
+ .slide.illus img{inset:0 0 auto 0;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center!important;transform:none!important}
+ .slide.illus::after{background:linear-gradient(180deg,rgba(29,29,31,0) 0,rgba(29,29,31,0) calc(56.25vw - 70px),#1D1D1F 56.25vw,#1D1D1F 100%)}
+ .slide.illus .wrap{padding-top:calc(56.25vw + 8px)}
 }
 
 .card[data-svc]{cursor:pointer}
@@ -232,7 +236,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   </div>
  </div>
  <div class="slide illus" role="group" aria-label="3 of 4">
-  <img src="img/van.svg" style="object-position:right 85%" alt="Illustration: schoolchildren in uniform waving from the orange Waywe school van" loading="lazy">
+  <img src="img/van.svg?v=3" style="object-position:right 85%" alt="Illustration: schoolchildren in uniform waving from the orange Waywe school van" loading="lazy">
   <div class="wrap">
    <span class="tag">Pick &amp; Drop · Multan</span>
    <h2 class="h1like">Safe daily <mark>pick &amp; drop</mark></h2>
@@ -244,7 +248,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   </div>
  </div>
  <div class="slide pink illus" role="group" aria-label="4 of 4">
-  <img src="img/scooty.svg" style="object-position:right 85%" alt="Illustration: woman in dupatta and helmet riding a pink scooty" loading="lazy">
+  <img src="img/scooty.svg?v=3" style="object-position:right 85%" alt="Illustration: woman in dupatta and helmet riding a pink scooty" loading="lazy">
   <div class="wrap">
    <span class="tag">Women only · Multan</span>
    <h2 class="h1like">Women drivers, <mark>for women</mark></h2>
