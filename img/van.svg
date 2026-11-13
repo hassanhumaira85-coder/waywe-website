@@ -1,94 +1,183 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
 <defs>
- <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC995"/><stop offset=".7" stop-color="#FFE7CF"/></linearGradient>
- <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A45"/><stop offset="1" stop-color="#F47B20"/></linearGradient>
- <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6F4FB"/><stop offset="1" stop-color="#B9DDEE"/></linearGradient>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#FFAE63"/><stop offset=".45" stop-color="#FFD3A1"/><stop offset=".8" stop-color="#FFEBD6"/>
+ </linearGradient>
+ <radialGradient id="sunglow" cx=".5" cy=".5" r=".5">
+  <stop offset="0" stop-color="#FFF6E5" stop-opacity=".95"/><stop offset=".35" stop-color="#FFE2B8" stop-opacity=".7"/><stop offset="1" stop-color="#FFD3A1" stop-opacity="0"/>
+ </radialGradient>
+ <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6BE92"/><stop offset="1" stop-color="#F9D2B0"/></linearGradient>
+ <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDA374"/><stop offset="1" stop-color="#F2B98F"/></linearGradient>
+ <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4C4C56"/><stop offset="1" stop-color="#34343C"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#FFB15E"/><stop offset=".5" stop-color="#F7862A"/><stop offset="1" stop-color="#E06A12"/>
+ </linearGradient>
+ <linearGradient id="band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D45F0C"/><stop offset="1" stop-color="#B84F05"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#EAF7FD"/><stop offset=".55" stop-color="#C4E3F2"/><stop offset="1" stop-color="#9FCBE2"/>
+ </linearGradient>
+ <radialGradient id="beam" cx="1" cy=".5" r="1">
+  <stop offset="0" stop-color="#FFF4C2" stop-opacity=".85"/><stop offset="1" stop-color="#FFF4C2" stop-opacity="0"/>
+ </radialGradient>
+ <radialGradient id="rim" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#A9B0BA"/></radialGradient>
+ <radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
 </defs>
+
+<!-- sky -->
 <rect width="1600" height="900" fill="url(#sky)"/>
-<circle cx="1380" cy="170" r="95" fill="#FFB067" opacity=".8"/>
-<g fill="#FFFFFF" opacity=".75"><ellipse cx="300" cy="140" rx="110" ry="30"/><ellipse cx="370" cy="120" rx="70" ry="34"/><ellipse cx="980" cy="110" rx="120" ry="28"/><ellipse cx="1050" cy="92" rx="70" ry="30"/></g>
-<!-- buildings -->
+<circle cx="1250" cy="250" r="300" fill="url(#sunglow)"/>
+<circle cx="1250" cy="250" r="78" fill="#FFF1D6"/>
+<g fill="#FFFFFF">
+ <g opacity=".7"><ellipse cx="260" cy="150" rx="120" ry="26"/><ellipse cx="330" cy="130" rx="70" ry="32"/><ellipse cx="210" cy="140" rx="50" ry="22"/></g>
+ <g opacity=".55"><ellipse cx="900" cy="105" rx="140" ry="24"/><ellipse cx="960" cy="88" rx="70" ry="28"/></g>
+ <g opacity=".45"><ellipse cx="1500" cy="180" rx="90" ry="18"/><ellipse cx="1540" cy="166" rx="50" ry="20"/></g>
+</g>
+<!-- birds -->
+<g fill="none" stroke="#C9733F" stroke-width="4" stroke-linecap="round" opacity=".7">
+ <path d="M640 200 q14 -12 28 0 q14 -12 28 0"/><path d="M710 170 q10 -9 20 0 q10 -9 20 0"/><path d="M595 235 q9 -8 18 0 q9 -8 18 0"/>
+</g>
+
+<!-- far skyline: Multan shrines and minarets -->
+<g fill="url(#far)">
+ <rect x="40" y="430" width="150" height="160"/><rect x="62" y="392" width="106" height="40"/>
+ <path d="M58 394 Q115 300 172 394 Z"/><rect x="112" y="282" width="6" height="24"/><circle cx="115" cy="280" r="7"/>
+ <rect x="20" y="360" width="18" height="230"/><path d="M14 362 h30 l-15 -26 z"/>
+ <rect x="192" y="360" width="18" height="230"/><path d="M186 362 h30 l-15 -26 z"/>
+ <rect x="520" y="470" width="120" height="130"/><path d="M520 472 Q580 395 640 472 Z"/><rect x="577" y="380" width="6" height="22"/>
+ <rect x="870" y="420" width="18" height="200"/><path d="M864 422 h30 l-15 -26 z"/>
+ <rect x="1450" y="440" width="140" height="170"/><rect x="1470" y="405" width="100" height="37"/>
+ <path d="M1466 407 Q1520 320 1574 407 Z"/><rect x="1517" y="300" width="6" height="22"/>
+</g>
+
+<!-- mid buildings -->
+<g fill="url(#mid)">
+ <rect x="230" y="470" width="260" height="230"/><rect x="660" y="440" width="190" height="260"/>
+ <rect x="1300" y="480" width="170" height="220"/>
+</g>
+<g fill="#FFF1E2" opacity=".8">
+ <rect x="255" y="500" width="40" height="50" rx="20"/><rect x="320" y="500" width="40" height="50" rx="20"/><rect x="385" y="500" width="40" height="50" rx="20"/>
+ <rect x="255" y="580" width="40" height="50" rx="20"/><rect x="320" y="580" width="40" height="50" rx="20"/><rect x="385" y="580" width="40" height="50" rx="20"/>
+ <rect x="690" y="470" width="44" height="54"/><rect x="760" y="470" width="44" height="54"/><rect x="690" y="555" width="44" height="54"/><rect x="760" y="555" width="44" height="54"/>
+ <rect x="1325" y="510" width="44" height="50"/><rect x="1395" y="510" width="44" height="50"/>
+</g>
+<!-- school sign on left building -->
+<rect x="268" y="446" width="184" height="36" rx="8" fill="#FFFFFF" opacity=".9"/>
+<text x="360" y="471" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="20" fill="#D9620A">SCHOOL</text>
+
+<!-- palms -->
 <g>
- <rect x="0" y="380" width="230" height="320" fill="#F2B98A"/><rect x="230" y="320" width="190" height="380" fill="#EBA678"/>
- <rect x="420" y="400" width="250" height="300" fill="#F4C59C"/><rect x="670" y="300" width="160" height="400" fill="#E79C6C"/>
- <rect x="830" y="360" width="260" height="340" fill="#F2B98A"/><rect x="1090" y="280" width="200" height="420" fill="#EBA678"/>
- <rect x="1290" y="370" width="310" height="330" fill="#F4C59C"/>
- <g fill="#FFF1E2" opacity=".85">
-  <rect x="30" y="420" width="50" height="60" rx="25"/><rect x="120" y="420" width="50" height="60" rx="25"/><rect x="30" y="520" width="50" height="60" rx="25"/><rect x="120" y="520" width="50" height="60" rx="25"/>
-  <rect x="265" y="360" width="45" height="55"/><rect x="340" y="360" width="45" height="55"/><rect x="265" y="450" width="45" height="55"/><rect x="340" y="450" width="45" height="55"/>
-  <rect x="460" y="440" width="60" height="50"/><rect x="560" y="440" width="60" height="50"/>
-  <rect x="700" y="340" width="40" height="55" rx="20"/><rect x="760" y="340" width="40" height="55" rx="20"/><rect x="700" y="430" width="40" height="55" rx="20"/><rect x="760" y="430" width="40" height="55" rx="20"/>
-  <rect x="1120" y="320" width="50" height="60"/><rect x="1200" y="320" width="50" height="60"/><rect x="1120" y="410" width="50" height="60"/><rect x="1200" y="410" width="50" height="60"/>
-  <rect x="1330" y="410" width="60" height="50"/><rect x="1430" y="410" width="60" height="50"/><rect x="1530" y="410" width="50" height="50"/>
+ <path d="M560 700 q-10 -110 14 -230" stroke="#9A6A45" stroke-width="14" fill="none" stroke-linecap="round"/>
+ <g fill="#6E9F57">
+  <path d="M574 470 q-70 -10 -110 30 q60 -20 110 -30z"/><path d="M574 470 q70 -14 112 22 q-60 -12 -112 -22z"/>
+  <path d="M574 470 q-40 -50 -100 -50 q50 15 100 50z"/><path d="M574 470 q40 -55 104 -48 q-56 12 -104 48z"/>
+  <path d="M574 470 q-6 -60 -40 -88 q22 40 40 88z"/>
  </g>
- <path d="M670 300 h160 l-80 -60z" fill="#D98A5A"/><circle cx="750" cy="232" r="10" fill="#D98A5A"/>
+ <path d="M1620 700 q-10 -110 14 -230" stroke="#9A6A45" stroke-width="14" fill="none"/>
 </g>
-<!-- trees -->
-<g><rect x="395" y="560" width="14" height="140" fill="#8A5A3B"/><circle cx="402" cy="540" r="62" fill="#6FA85E"/><circle cx="360" cy="570" r="40" fill="#7DB86B"/><circle cx="445" cy="568" r="42" fill="#7DB86B"/></g>
-<g><rect x="1545" y="560" width="14" height="140" fill="#8A5A3B"/><circle cx="1552" cy="540" r="62" fill="#6FA85E"/><circle cx="1510" cy="575" r="40" fill="#7DB86B"/></g>
-<!-- ground -->
-<rect y="690" width="1600" height="26" fill="#E9D5C2"/><rect y="716" width="1600" height="184" fill="#55555E"/>
-<g fill="#FFFFFF" opacity=".8"><rect x="40" y="815" width="120" height="10" rx="5"/><rect x="260" y="815" width="120" height="10" rx="5"/><rect x="480" y="815" width="120" height="10" rx="5"/><rect x="700" y="815" width="120" height="10" rx="5"/><rect x="920" y="815" width="120" height="10" rx="5"/><rect x="1140" y="815" width="120" height="10" rx="5"/><rect x="1360" y="815" width="120" height="10" rx="5"/></g>
+<!-- round trees -->
+<g><rect x="455" y="600" width="12" height="100" fill="#8A5A3B"/><circle cx="461" cy="585" r="48" fill="#6FA85E"/><circle cx="440" cy="570" r="20" fill="#86BC72" opacity=".8"/></g>
+<g><rect x="760" y="610" width="12" height="90" fill="#8A5A3B"/><circle cx="766" cy="595" r="42" fill="#6FA85E"/><circle cx="748" cy="582" r="17" fill="#86BC72" opacity=".8"/></g>
+
+<!-- boundary wall + curb -->
+<rect y="650" width="1600" height="50" fill="#E7B48C"/>
+<g fill="#D99B6E" opacity=".6"><rect y="664" width="1600" height="3"/><rect y="682" width="1600" height="3"/></g>
+<rect y="700" width="1600" height="16" fill="#1D1D1F"/>
+<g fill="#FFD23F"><rect x="0" y="700" width="50" height="16"/><rect x="100" y="700" width="50" height="16"/><rect x="200" y="700" width="50" height="16"/><rect x="300" y="700" width="50" height="16"/><rect x="400" y="700" width="50" height="16"/><rect x="500" y="700" width="50" height="16"/><rect x="600" y="700" width="50" height="16"/><rect x="700" y="700" width="50" height="16"/><rect x="800" y="700" width="50" height="16"/><rect x="900" y="700" width="50" height="16"/><rect x="1000" y="700" width="50" height="16"/><rect x="1100" y="700" width="50" height="16"/><rect x="1200" y="700" width="50" height="16"/><rect x="1300" y="700" width="50" height="16"/><rect x="1400" y="700" width="50" height="16"/><rect x="1500" y="700" width="50" height="16"/></g>
+
+<!-- road -->
+<rect y="716" width="1600" height="184" fill="url(#road)"/>
+<g fill="#FFFFFF" opacity=".75"><rect x="20" y="836" width="130" height="10" rx="5"/><rect x="250" y="836" width="130" height="10" rx="5"/><rect x="480" y="836" width="130" height="10" rx="5"/><rect x="710" y="836" width="130" height="10" rx="5"/><rect x="940" y="836" width="130" height="10" rx="5"/><rect x="1170" y="836" width="130" height="10" rx="5"/><rect x="1400" y="836" width="130" height="10" rx="5"/></g>
+
+<!-- headlight beam -->
+<path d="M840 640 L560 600 L560 760 Z" fill="url(#beam)" opacity=".7"/>
 <!-- van shadow -->
-<ellipse cx="1150" cy="790" rx="380" ry="22" fill="#000" opacity=".25"/>
+<ellipse cx="1170" cy="805" rx="400" ry="26" fill="url(#shadow)"/>
+<!-- speed lines -->
+<g stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity=".55">
+ <path d="M1545 560 h45"/><path d="M1550 610 h40"/><path d="M1540 660 h50"/>
+</g>
+
 <!-- roof sign -->
-<rect x="1060" y="372" width="250" height="44" rx="10" fill="#FFD23F" stroke="#1D1D1F" stroke-width="4"/>
-<text x="1185" y="403" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="24" fill="#1D1D1F">SCHOOL VAN</text>
-<rect x="1150" y="416" width="10" height="16" fill="#1D1D1F"/><rect x="1210" y="416" width="10" height="16" fill="#1D1D1F"/>
-<!-- van body (facing left) -->
-<path d="M835 600 Q840 520 900 470 Q930 440 980 432 L1470 432 Q1505 432 1505 470 L1505 735 Q1505 760 1480 760 L860 760 Q830 760 830 730 Z" fill="url(#body)" stroke="#B84F05" stroke-width="4"/>
-<rect x="830" y="680" width="675" height="80" fill="#D9620A"/>
-<path d="M830 680 h675 v50 q0 30 -25 30 h-620 q-30 0 -30 -30z" fill="#D9620A"/>
+<rect x="1080" y="398" width="8" height="26" fill="#1D1D1F"/><rect x="1290" y="398" width="8" height="26" fill="#1D1D1F"/>
+<rect x="1050" y="354" width="280" height="50" rx="12" fill="#FFD23F" stroke="#1D1D1F" stroke-width="4"/>
+<text x="1190" y="389" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="27" fill="#1D1D1F" letter-spacing="1">SCHOOL VAN</text>
+
+<!-- van body -->
+<path d="M836 735 L840 600 Q846 520 905 468 Q935 440 990 432 L1478 428 Q1520 428 1522 470 L1524 735 Q1524 765 1494 765 L866 765 Q836 765 836 735 Z" fill="url(#body)"/>
+<path d="M905 468 Q935 440 990 432 L1478 428 Q1510 428 1518 450 L920 456 Z" fill="#FFFFFF" opacity=".22"/>
+<path d="M836 690 L1524 690 L1524 735 Q1524 765 1494 765 L866 765 Q836 765 836 735 Z" fill="url(#band)"/>
+<rect x="836" y="684" width="688" height="5" fill="#FFFFFF" opacity=".8"/>
+
 <!-- windshield -->
-<path d="M862 590 Q875 505 925 470 L975 466 L975 590 Z" fill="url(#glass)" stroke="#B84F05" stroke-width="4"/>
+<path d="M864 598 Q876 512 925 472 L985 466 L985 598 Z" fill="url(#glass)"/>
+<path d="M900 560 L950 476 L966 476 L916 560 Z" fill="#FFFFFF" opacity=".45"/>
 <!-- driver -->
-<circle cx="945" cy="525" r="22" fill="#8D5A3B"/><path d="M923 520 q22 -30 44 0 q-6 -22 -22 -24 q-16 2 -22 24z" fill="#2B2B2B"/>
-<path d="M915 590 q30 -50 60 0z" fill="#3B6EA8"/>
+<circle cx="948" cy="528" r="22" fill="#8D5A3B"/><path d="M926 524 q4 -32 22 -32 q22 0 24 32 q-10 -14 -24 -14 q-14 0 -22 14z" fill="#262626"/>
+<path d="M916 598 q32 -56 66 0z" fill="#3B6EA8"/>
+
 <!-- side windows -->
-<g stroke="#B84F05" stroke-width="4">
- <rect x="995" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
- <rect x="1115" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
- <rect x="1235" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
- <rect x="1355" y="460" width="120" height="120" rx="10" fill="url(#glass)"/>
-</g>
-<!-- kids -->
 <g>
- <!-- kid1 girl -->
- <path d="M1012 580 q35 -48 70 0z" fill="#FFFFFF"/><path d="M1035 560 l12 12 l12 -12" stroke="#2B4C8C" stroke-width="5" fill="none"/>
- <circle cx="1047" cy="522" r="26" fill="#C68A5E"/>
- <path d="M1019 520 q2 -36 28 -36 q30 0 30 36 q-6 -18 -28 -20 q-20 2 -30 20z" fill="#2B1B12"/>
- <circle cx="1022" cy="535" r="8" fill="#2B1B12"/><circle cx="1072" cy="535" r="8" fill="#2B1B12"/>
- <circle cx="1038" cy="522" r="3" fill="#1D1D1F"/><circle cx="1056" cy="522" r="3" fill="#1D1D1F"/><path d="M1038 534 q9 8 18 0" stroke="#7A3B1E" stroke-width="3" fill="none" stroke-linecap="round"/>
- <!-- kid2 boy waving -->
- <path d="M1132 580 q35 -48 70 0z" fill="#FFFFFF"/><path d="M1162 556 l5 24 l5 -24z" fill="#2B4C8C"/>
- <circle cx="1167" cy="522" r="26" fill="#8D5A3B"/><path d="M1141 515 q4 -30 26 -30 q24 0 27 30 q-12 -14 -27 -14 q-14 0 -26 14z" fill="#1D1D1F"/>
- <circle cx="1158" cy="522" r="3" fill="#1D1D1F"/><circle cx="1176" cy="522" r="3" fill="#1D1D1F"/><path d="M1156 533 q11 10 22 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
- <path d="M1203 572 l12 -60" stroke="#8D5A3B" stroke-width="12" stroke-linecap="round"/><circle cx="1215" cy="506" r="11" fill="#8D5A3B"/>
- <!-- kid3 girl with dupatta-style scarf -->
- <path d="M1252 580 q35 -48 70 0z" fill="#FFFFFF"/>
- <circle cx="1287" cy="524" r="26" fill="#A86B45"/>
- <path d="M1257 540 q-4 -58 30 -58 q34 0 30 58 q-6 -40 -30 -40 q-24 0 -30 40z" fill="#FFFFFF"/>
- <circle cx="1278" cy="524" r="3" fill="#1D1D1F"/><circle cx="1296" cy="524" r="3" fill="#1D1D1F"/><path d="M1278 535 q9 8 18 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
- <!-- kid4 boy waving -->
- <path d="M1378 580 q37 -48 74 0z" fill="#FFFFFF"/><path d="M1410 556 l5 24 l5 -24z" fill="#2B4C8C"/>
- <circle cx="1415" cy="522" r="26" fill="#C68A5E"/><path d="M1389 518 q2 -32 26 -32 q26 0 26 32 q-8 -16 -26 -16 q-16 0 -26 16z" fill="#3A2416"/>
- <circle cx="1406" cy="522" r="3" fill="#1D1D1F"/><circle cx="1424" cy="522" r="3" fill="#1D1D1F"/><path d="M1404 533 q11 10 22 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
- <path d="M1380 572 l-10 -58" stroke="#C68A5E" stroke-width="12" stroke-linecap="round"/><circle cx="1369" cy="508" r="11" fill="#C68A5E"/>
+ <rect x="1000" y="460" width="108" height="122" rx="12" fill="url(#glass)"/>
+ <rect x="1122" y="460" width="108" height="122" rx="12" fill="url(#glass)"/>
+ <rect x="1244" y="460" width="108" height="122" rx="12" fill="url(#glass)"/>
+ <rect x="1366" y="460" width="124" height="122" rx="12" fill="url(#glass)"/>
 </g>
-<!-- door line + handle -->
-<path d="M985 600 L985 680" stroke="#B84F05" stroke-width="4"/><rect x="995" y="612" width="34" height="9" rx="4" fill="#B84F05"/>
-<!-- WAYWE branding -->
-<g transform="translate(1090 605)">
- <rect width="52" height="52" rx="13" fill="#FFFFFF"/>
- <path d="M9 40 C13 26 19 24 26 25 C32 27 36 25 41 15" stroke="#F47B20" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="42" cy="13" r="5" fill="#F47B20"/>
- <text x="66" y="40" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="40" fill="#FFFFFF">WAYWE</text>
+
+<!-- kids in uniform -->
+<g>
+ <!-- girl, plaits -->
+ <path d="M1018 582 q36 -50 72 0z" fill="#FFFFFF"/><path d="M1040 562 l14 14 l14 -14" stroke="#2B4C8C" stroke-width="6" fill="none" stroke-linejoin="round"/>
+ <circle cx="1054" cy="524" r="27" fill="#C68A5E"/>
+ <path d="M1025 522 q2 -38 29 -38 q31 0 31 38 q-7 -19 -30 -21 q-21 2 -30 21z" fill="#2B1B12"/>
+ <path d="M1027 530 q-10 18 -4 36" stroke="#2B1B12" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M1081 530 q10 18 4 36" stroke="#2B1B12" stroke-width="9" fill="none" stroke-linecap="round"/>
+ <circle cx="1045" cy="525" r="3.2" fill="#1D1D1F"/><circle cx="1063" cy="525" r="3.2" fill="#1D1D1F"/><path d="M1045 537 q9 8 18 0" stroke="#7A3B1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <circle cx="1038" cy="533" r="4" fill="#F28C8C" opacity=".5"/><circle cx="1070" cy="533" r="4" fill="#F28C8C" opacity=".5"/>
+ <!-- boy waving -->
+ <path d="M1140 582 q36 -50 72 0z" fill="#FFFFFF"/><path d="M1170 558 l6 24 l6 -24z" fill="#8E1F2F"/>
+ <circle cx="1176" cy="524" r="27" fill="#8D5A3B"/><path d="M1149 517 q4 -31 27 -31 q25 0 28 31 q-13 -14 -28 -14 q-14 0 -27 14z" fill="#1D1D1F"/>
+ <circle cx="1167" cy="525" r="3.2" fill="#1D1D1F"/><circle cx="1185" cy="525" r="3.2" fill="#1D1D1F"/><path d="M1164 536 q12 11 24 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M1212 574 l14 -62" stroke="#8D5A3B" stroke-width="13" stroke-linecap="round"/><circle cx="1227" cy="506" r="12" fill="#8D5A3B"/>
+ <!-- girl, white scarf -->
+ <path d="M1262 582 q36 -50 72 0z" fill="#FFFFFF"/>
+ <circle cx="1298" cy="526" r="27" fill="#A86B45"/>
+ <path d="M1267 544 q-5 -60 31 -60 q36 0 31 60 q-7 -42 -31 -42 q-24 0 -31 42z" fill="#FFFFFF"/>
+ <circle cx="1289" cy="527" r="3.2" fill="#1D1D1F"/><circle cx="1307" cy="527" r="3.2" fill="#1D1D1F"/><path d="M1289 538 q9 8 18 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <circle cx="1282" cy="535" r="4" fill="#F28C8C" opacity=".5"/><circle cx="1314" cy="535" r="4" fill="#F28C8C" opacity=".5"/>
+ <!-- boy waving -->
+ <path d="M1390 582 q38 -50 76 0z" fill="#FFFFFF"/><path d="M1422 558 l6 24 l6 -24z" fill="#2B4C8C"/>
+ <circle cx="1428" cy="524" r="27" fill="#C68A5E"/><path d="M1401 520 q2 -33 27 -33 q27 0 27 33 q-8 -17 -27 -17 q-17 0 -27 17z" fill="#3A2416"/>
+ <circle cx="1419" cy="525" r="3.2" fill="#1D1D1F"/><circle cx="1437" cy="525" r="3.2" fill="#1D1D1F"/><path d="M1416 536 q12 11 24 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M1392 574 l-11 -60" stroke="#C68A5E" stroke-width="13" stroke-linecap="round"/><circle cx="1380" cy="508" r="12" fill="#C68A5E"/>
 </g>
-<text x="1365" y="660" font-family="Poppins,Arial,sans-serif" font-weight="600" font-size="20" fill="#FFF1E2">Pick &amp; Drop</text>
-<!-- lights -->
-<ellipse cx="848" cy="640" rx="14" ry="18" fill="#FFF6C8" stroke="#B84F05" stroke-width="3"/>
-<rect x="1494" y="610" width="12" height="40" rx="4" fill="#E53935"/>
-<rect x="822" y="700" width="40" height="22" rx="6" fill="#9E9E9E"/>
+<!-- window shine -->
+<g fill="#FFFFFF" opacity=".35">
+ <path d="M1006 580 L1056 464 L1074 464 L1024 580 Z"/><path d="M1128 580 L1178 464 L1196 464 L1146 580 Z"/>
+ <path d="M1250 580 L1300 464 L1318 464 L1268 580 Z"/><path d="M1372 580 L1422 464 L1440 464 L1390 580 Z"/>
+</g>
+
+<!-- door, handle, mirror -->
+<path d="M992 600 L992 684" stroke="#C25A0C" stroke-width="4"/><rect x="1002" y="614" width="36" height="9" rx="4.5" fill="#C25A0C"/>
+<path d="M868 520 l-26 -6 l-4 26 l24 4z" fill="#1D1D1F"/>
+<!-- headlight + bumper + tail light -->
+<ellipse cx="850" cy="640" rx="12" ry="20" fill="#FFF6C9" stroke="#C25A0C" stroke-width="3"/>
+<rect x="826" y="728" width="44" height="22" rx="8" fill="#2A2A2E"/>
+<rect x="1512" y="600" width="14" height="40" rx="5" fill="#E23B3B"/>
+<!-- Waywe logo -->
+<g transform="translate(1068 706)">
+ <rect x="0" y="0" width="40" height="40" rx="10" fill="#FFFFFF"/>
+ <path d="M7 31 C10 21 15 19 21 20 C26 21 29 19 33 11" stroke="#F47B20" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="34" cy="10" r="3.5" fill="#F47B20"/>
+ <text x="52" y="31" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="30" fill="#FFFFFF">WAYWE</text>
+</g>
+
 <!-- wheels -->
-<g><circle cx="960" cy="760" r="58" fill="#26262B"/><circle cx="960" cy="760" r="28" fill="#BDBDBD"/><circle cx="960" cy="760" r="9" fill="#757575"/></g>
-<g><circle cx="1370" cy="760" r="58" fill="#26262B"/><circle cx="1370" cy="760" r="28" fill="#BDBDBD"/><circle cx="1370" cy="760" r="9" fill="#757575"/></g>
+<g>
+ <circle cx="960" cy="765" r="60" fill="#1D1D1F"/><circle cx="960" cy="765" r="34" fill="url(#rim)"/>
+ <g stroke="#8E949C" stroke-width="5"><path d="M960 734 v62"/><path d="M929 765 h62"/><path d="M938 743 l44 44"/><path d="M982 743 l-44 44"/></g>
+ <circle cx="960" cy="765" r="9" fill="#5A5F66"/>
+ <circle cx="1392" cy="765" r="60" fill="#1D1D1F"/><circle cx="1392" cy="765" r="34" fill="url(#rim)"/>
+ <g stroke="#8E949C" stroke-width="5"><path d="M1392 734 v62"/><path d="M1361 765 h62"/><path d="M1370 743 l44 44"/><path d="M1414 743 l-44 44"/></g>
+ <circle cx="1392" cy="765" r="9" fill="#5A5F66"/>
+ <path d="M893 730 Q900 690 960 688 Q1020 690 1027 730" fill="none" stroke="#B84F05" stroke-width="6"/>
+ <path d="M1325 730 Q1332 690 1392 688 Q1452 690 1459 730" fill="none" stroke="#B84F05" stroke-width="6"/>
+</g>
 </svg>
