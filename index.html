@@ -46,7 +46,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 
 /* hero slider */
 .hero{position:relative;height:min(86vh,720px);min-height:540px;overflow:hidden;background:#1D1D1F;padding:0}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;pointer-events:none}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .5s ease;pointer-events:none}
 .slide.on{opacity:1;pointer-events:auto}
 .slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 7s ease}
 .slide.on img{transform:scale(1)}
@@ -542,7 +542,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSvc()})
  sl.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Slide '+(i+1));b.onclick=function(){hGo(i,1)};d.appendChild(b)});
  var dots=[].slice.call(d.children);
  window.hGo=function(i,user){hIdx=(i+sl.length)%sl.length;sl.forEach(function(s,j){s.classList.toggle('on',j===hIdx)});dots.forEach(function(b,j){b.classList.toggle('on',j===hIdx)});if(user)start()};
- function start(){clearInterval(t);t=setInterval(function(){hGo(hIdx+1)},5500)}
+ function start(){clearInterval(t);t=setInterval(function(){hGo(hIdx+1)},1900)}
  var h=document.querySelector('.hero'),x0=null;
  h.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
  h.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)hGo(hIdx+(dx<0?1:-1),1);x0=null});
