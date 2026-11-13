@@ -5,3 +5,9 @@
     Header set Pragma "no-cache"
   </FilesMatch>
 </IfModule>
+
+# Hide Git and repo files from visitors
+RedirectMatch 404 /\.git
+<FilesMatch "^(README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>
