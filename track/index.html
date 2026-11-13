@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Track ride | Waywe</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23F47B20'/%3E%3Cpath d='M18 76 C26 50 36 46 50 49 C62 52 70 48 80 30' stroke='white' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='82' cy='27' r='9' fill='white'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--o:#F47B20;--od:#D9620A;--ink:#1D1D1F;--muted:#6B6B70;--bg:#FFF8F2;--line:#F1E4D8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+header{background:#fff;border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--ink);text-decoration:none}
+.brand b{font-weight:inherit}.brand span{color:var(--o)}
+.live{font-size:12px;font-weight:700;color:#16A34A;display:flex;align-items:center;gap:6px}
+.live i{width:8px;height:8px;border-radius:50%;background:#16A34A;animation:p 1.4s infinite}
+@keyframes p{50%{opacity:.3}}
+#map{height:52vh;min-height:300px;background:#F6EFE6}
+main{flex:1;padding:16px;max-width:640px;width:100%;margin:-28px auto 0;position:relative;z-index:500}
+.card{background:#fff;border-radius:22px;padding:20px;box-shadow:0 16px 40px rgba(0,0,0,.10);border:1px solid var(--line)}
+.status{display:inline-block;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;background:#FFE9D6;color:var(--od)}
+h1{font-size:22px;margin:10px 0 4px}
+.sub{color:var(--muted);font-size:14px}
+.route{background:var(--bg);border-radius:14px;padding:12px 14px;margin-top:14px;font-size:14px;line-height:1.7}
+.driver{display:flex;align-items:center;gap:12px;margin-top:14px}
+.driver .av{width:44px;height:44px;border-radius:14px;background:#FFE9D6;display:grid;place-items:center;font-size:22px}
+.driver b{display:block}.driver small{color:var(--muted)}
+.upd{color:var(--muted);font-size:12px;margin-top:12px}
+.msg{text-align:center;padding:30px 10px}
+.msg .big{font-size:44px}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+footer a{color:var(--od)}
+.pin{font-size:30px;line-height:30px;text-align:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.dot{width:16px;height:16px;border-radius:50%;border:3px solid #fff;background:#F47B20;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+</style>
+</head>
+<body>
+<header>
+ <a class="brand" href="/" aria-label="Waywe home">
+  <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#F47B20"/><path d="M18 76 C26 50 36 46 50 49 C62 52 70 48 80 30" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="82" cy="27" r="9" fill="#fff"/></svg>
+  <b>Way<span>we</span></b>
+ </a>
+ <div class="live" id="live" hidden><i></i>LIVE</div>
+</header>
+<div id="map"></div>
+<main><div class="card" id="card"><div class="msg"><div class="big">⏳</div><p class="sub">Loading ride…</p></div></div></main>
+<footer>Shared with you by a Waywe passenger for their safety · <a href="/">mywaywe.com</a></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var SB_URL="https://fozijxegxbzfjratzavd.supabase.co";
+var SB_KEY="sb_publishable_HNLdjacw47n6ydFyFNItWg_MVk_QEbR";
+var token=new URLSearchParams(location.search).get('t')||'';
+var LABEL={pending:'Looking for a driver',accepted:'Driver on the way to pickup',on_the_way:'Ride in progress',completed:'Ride completed',cancelled:'Ride cancelled',expired:'Link expired'};
+var SVC={ride:'Short Ride',rental:'Rental Car',pickdrop:'Pick & Drop',women:'Women-only Ride'};
+var map=L.map('map',{zoomControl:false}).setView([30.1575,71.5249],13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+var car=null,pick=null,fitted=false,timer=null;
+function esc(t){return String(t==null?'':t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ago(iso){if(!iso)return'';var m=Math.round((Date.now()-new Date(iso).getTime())/60000);return m<=0?'just now':m===1?'1 min ago':m<60?m+' min ago':Math.round(m/60)+' hr ago'}
+function icon(v){v=(v||'').toLowerCase();return v.indexOf('scooty')>-1||v.indexOf('bike')>-1?'🛵':v.indexOf('rickshaw')>-1?'🛺':v.indexOf('van')>-1?'🚐':'🚗'}
+function show(d){
+ var card=document.getElementById('card');
+ if(!d||d.status==='expired'){card.innerHTML='<div class="msg"><div class="big">🔒</div><h1>This link is not active</h1><p class="sub">Ride links stop working 2 days after the ride. Ask the passenger to share a new link.</p></div>';stop();return}
+ var active=d.status==='accepted'||d.status==='on_the_way';
+ document.getElementById('live').hidden=!active;
+ var html='<span class="status">'+esc(LABEL[d.status]||d.status)+'</span>'+
+  '<h1>'+esc(SVC[d.service]||'Waywe ride')+'</h1>'+
+  '<p class="sub">'+(d.status==='completed'?'The passenger has reached the destination. ✅':active?'You can follow this ride live on the map.':'')+'</p>'+
+  '<div class="route">🟠 '+esc(d.pickup)+(d.dropoff?'<br>🏁 '+esc(d.dropoff):'')+'</div>';
+ if(d.driver_name||d.vehicle_reg){html+='<div class="driver"><div class="av">'+icon(d.vehicle||d.vehicle_type)+'</div><div><b>'+esc(d.driver_name||'Waywe driver')+'</b><small>'+esc([d.vehicle_type,d.vehicle_reg].filter(Boolean).join(' · '))+'</small></div></div>'}
+ if(active&&d.updated_at){html+='<p class="upd">Location updated '+ago(d.updated_at)+' · refreshes automatically</p>'}
+ if(active&&!d.lat){html+='<p class="upd">Waiting for the driver\'s location…</p>'}
+ card.innerHTML=html;
+ var pts=[];
+ if(d.pickup_lat&&d.pickup_lng&&d.status==='accepted'){var p=[d.pickup_lat,d.pickup_lng];pts.push(p);if(pick)pick.setLatLng(p);else pick=L.marker(p,{icon:L.divIcon({className:'',html:'<div class="dot"></div>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(map)}
+ else if(pick){map.removeLayer(pick);pick=null}
+ if(active&&d.lat&&d.lng){var c=[d.lat,d.lng];pts.push(c);if(car)car.setLatLng(c);else car=L.marker(c,{icon:L.divIcon({className:'',html:'<div class="pin">'+icon(d.vehicle||d.vehicle_type)+'</div>',iconSize:[34,34],iconAnchor:[17,17]})}).addTo(map)}
+ else if(car){map.removeLayer(car);car=null}
+ if(pts.length===1)map.setView(pts[0],fitted?map.getZoom():16);else if(pts.length>1)map.fitBounds(pts,{padding:[50,50],maxZoom:16});
+ fitted=pts.length>0;
+ if(!active)stop();
+}
+function stop(){if(timer){clearInterval(timer);timer=null}}
+function load(){
+ if(!/^[0-9a-f-]{36}$/i.test(token)){show(null);return}
+ fetch(SB_URL+'/rest/v1/rpc/get_shared_ride',{method:'POST',headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({token:token})})
+  .then(function(r){return r.ok?r.json():null}).then(show).catch(function(){});
+}
+load();timer=setInterval(load,10000);
+</script>
+</body>
+</html>
