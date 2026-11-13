@@ -5,3 +5,5 @@ Website for Waywe – rides, rental cars, pick & drop and women-only rides in Mu
 Live: https://mywaywe.com
 
 Every push to `main` is deployed to Hostinger (public_html) automatically.
+
+Deployment: Hostinger Git auto-deploy (main -> public_html).
