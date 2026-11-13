@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC995"/><stop offset=".7" stop-color="#FFE7CF"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A45"/><stop offset="1" stop-color="#F47B20"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6F4FB"/><stop offset="1" stop-color="#B9DDEE"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1380" cy="170" r="95" fill="#FFB067" opacity=".8"/>
+<g fill="#FFFFFF" opacity=".75"><ellipse cx="300" cy="140" rx="110" ry="30"/><ellipse cx="370" cy="120" rx="70" ry="34"/><ellipse cx="980" cy="110" rx="120" ry="28"/><ellipse cx="1050" cy="92" rx="70" ry="30"/></g>
+<!-- buildings -->
+<g>
+ <rect x="0" y="380" width="230" height="320" fill="#F2B98A"/><rect x="230" y="320" width="190" height="380" fill="#EBA678"/>
+ <rect x="420" y="400" width="250" height="300" fill="#F4C59C"/><rect x="670" y="300" width="160" height="400" fill="#E79C6C"/>
+ <rect x="830" y="360" width="260" height="340" fill="#F2B98A"/><rect x="1090" y="280" width="200" height="420" fill="#EBA678"/>
+ <rect x="1290" y="370" width="310" height="330" fill="#F4C59C"/>
+ <g fill="#FFF1E2" opacity=".85">
+  <rect x="30" y="420" width="50" height="60" rx="25"/><rect x="120" y="420" width="50" height="60" rx="25"/><rect x="30" y="520" width="50" height="60" rx="25"/><rect x="120" y="520" width="50" height="60" rx="25"/>
+  <rect x="265" y="360" width="45" height="55"/><rect x="340" y="360" width="45" height="55"/><rect x="265" y="450" width="45" height="55"/><rect x="340" y="450" width="45" height="55"/>
+  <rect x="460" y="440" width="60" height="50"/><rect x="560" y="440" width="60" height="50"/>
+  <rect x="700" y="340" width="40" height="55" rx="20"/><rect x="760" y="340" width="40" height="55" rx="20"/><rect x="700" y="430" width="40" height="55" rx="20"/><rect x="760" y="430" width="40" height="55" rx="20"/>
+  <rect x="1120" y="320" width="50" height="60"/><rect x="1200" y="320" width="50" height="60"/><rect x="1120" y="410" width="50" height="60"/><rect x="1200" y="410" width="50" height="60"/>
+  <rect x="1330" y="410" width="60" height="50"/><rect x="1430" y="410" width="60" height="50"/><rect x="1530" y="410" width="50" height="50"/>
+ </g>
+ <path d="M670 300 h160 l-80 -60z" fill="#D98A5A"/><circle cx="750" cy="232" r="10" fill="#D98A5A"/>
+</g>
+<!-- trees -->
+<g><rect x="395" y="560" width="14" height="140" fill="#8A5A3B"/><circle cx="402" cy="540" r="62" fill="#6FA85E"/><circle cx="360" cy="570" r="40" fill="#7DB86B"/><circle cx="445" cy="568" r="42" fill="#7DB86B"/></g>
+<g><rect x="1545" y="560" width="14" height="140" fill="#8A5A3B"/><circle cx="1552" cy="540" r="62" fill="#6FA85E"/><circle cx="1510" cy="575" r="40" fill="#7DB86B"/></g>
+<!-- ground -->
+<rect y="690" width="1600" height="26" fill="#E9D5C2"/><rect y="716" width="1600" height="184" fill="#55555E"/>
+<g fill="#FFFFFF" opacity=".8"><rect x="40" y="815" width="120" height="10" rx="5"/><rect x="260" y="815" width="120" height="10" rx="5"/><rect x="480" y="815" width="120" height="10" rx="5"/><rect x="700" y="815" width="120" height="10" rx="5"/><rect x="920" y="815" width="120" height="10" rx="5"/><rect x="1140" y="815" width="120" height="10" rx="5"/><rect x="1360" y="815" width="120" height="10" rx="5"/></g>
+<!-- van shadow -->
+<ellipse cx="1150" cy="790" rx="380" ry="22" fill="#000" opacity=".25"/>
+<!-- roof sign -->
+<rect x="1060" y="372" width="250" height="44" rx="10" fill="#FFD23F" stroke="#1D1D1F" stroke-width="4"/>
+<text x="1185" y="403" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="24" fill="#1D1D1F">SCHOOL VAN</text>
+<rect x="1150" y="416" width="10" height="16" fill="#1D1D1F"/><rect x="1210" y="416" width="10" height="16" fill="#1D1D1F"/>
+<!-- van body (facing left) -->
+<path d="M835 600 Q840 520 900 470 Q930 440 980 432 L1470 432 Q1505 432 1505 470 L1505 735 Q1505 760 1480 760 L860 760 Q830 760 830 730 Z" fill="url(#body)" stroke="#B84F05" stroke-width="4"/>
+<rect x="830" y="680" width="675" height="80" fill="#D9620A"/>
+<path d="M830 680 h675 v50 q0 30 -25 30 h-620 q-30 0 -30 -30z" fill="#D9620A"/>
+<!-- windshield -->
+<path d="M862 590 Q875 505 925 470 L975 466 L975 590 Z" fill="url(#glass)" stroke="#B84F05" stroke-width="4"/>
+<!-- driver -->
+<circle cx="945" cy="525" r="22" fill="#8D5A3B"/><path d="M923 520 q22 -30 44 0 q-6 -22 -22 -24 q-16 2 -22 24z" fill="#2B2B2B"/>
+<path d="M915 590 q30 -50 60 0z" fill="#3B6EA8"/>
+<!-- side windows -->
+<g stroke="#B84F05" stroke-width="4">
+ <rect x="995" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
+ <rect x="1115" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
+ <rect x="1235" y="460" width="105" height="120" rx="10" fill="url(#glass)"/>
+ <rect x="1355" y="460" width="120" height="120" rx="10" fill="url(#glass)"/>
+</g>
+<!-- kids -->
+<g>
+ <!-- kid1 girl -->
+ <path d="M1012 580 q35 -48 70 0z" fill="#FFFFFF"/><path d="M1035 560 l12 12 l12 -12" stroke="#2B4C8C" stroke-width="5" fill="none"/>
+ <circle cx="1047" cy="522" r="26" fill="#C68A5E"/>
+ <path d="M1019 520 q2 -36 28 -36 q30 0 30 36 q-6 -18 -28 -20 q-20 2 -30 20z" fill="#2B1B12"/>
+ <circle cx="1022" cy="535" r="8" fill="#2B1B12"/><circle cx="1072" cy="535" r="8" fill="#2B1B12"/>
+ <circle cx="1038" cy="522" r="3" fill="#1D1D1F"/><circle cx="1056" cy="522" r="3" fill="#1D1D1F"/><path d="M1038 534 q9 8 18 0" stroke="#7A3B1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <!-- kid2 boy waving -->
+ <path d="M1132 580 q35 -48 70 0z" fill="#FFFFFF"/><path d="M1162 556 l5 24 l5 -24z" fill="#2B4C8C"/>
+ <circle cx="1167" cy="522" r="26" fill="#8D5A3B"/><path d="M1141 515 q4 -30 26 -30 q24 0 27 30 q-12 -14 -27 -14 q-14 0 -26 14z" fill="#1D1D1F"/>
+ <circle cx="1158" cy="522" r="3" fill="#1D1D1F"/><circle cx="1176" cy="522" r="3" fill="#1D1D1F"/><path d="M1156 533 q11 10 22 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M1203 572 l12 -60" stroke="#8D5A3B" stroke-width="12" stroke-linecap="round"/><circle cx="1215" cy="506" r="11" fill="#8D5A3B"/>
+ <!-- kid3 girl with dupatta-style scarf -->
+ <path d="M1252 580 q35 -48 70 0z" fill="#FFFFFF"/>
+ <circle cx="1287" cy="524" r="26" fill="#A86B45"/>
+ <path d="M1257 540 q-4 -58 30 -58 q34 0 30 58 q-6 -40 -30 -40 q-24 0 -30 40z" fill="#FFFFFF"/>
+ <circle cx="1278" cy="524" r="3" fill="#1D1D1F"/><circle cx="1296" cy="524" r="3" fill="#1D1D1F"/><path d="M1278 535 q9 8 18 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <!-- kid4 boy waving -->
+ <path d="M1378 580 q37 -48 74 0z" fill="#FFFFFF"/><path d="M1410 556 l5 24 l5 -24z" fill="#2B4C8C"/>
+ <circle cx="1415" cy="522" r="26" fill="#C68A5E"/><path d="M1389 518 q2 -32 26 -32 q26 0 26 32 q-8 -16 -26 -16 q-16 0 -26 16z" fill="#3A2416"/>
+ <circle cx="1406" cy="522" r="3" fill="#1D1D1F"/><circle cx="1424" cy="522" r="3" fill="#1D1D1F"/><path d="M1404 533 q11 10 22 0" stroke="#5A2A12" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M1380 572 l-10 -58" stroke="#C68A5E" stroke-width="12" stroke-linecap="round"/><circle cx="1369" cy="508" r="11" fill="#C68A5E"/>
+</g>
+<!-- door line + handle -->
+<path d="M985 600 L985 680" stroke="#B84F05" stroke-width="4"/><rect x="995" y="612" width="34" height="9" rx="4" fill="#B84F05"/>
+<!-- WAYWE branding -->
+<g transform="translate(1090 605)">
+ <rect width="52" height="52" rx="13" fill="#FFFFFF"/>
+ <path d="M9 40 C13 26 19 24 26 25 C32 27 36 25 41 15" stroke="#F47B20" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="42" cy="13" r="5" fill="#F47B20"/>
+ <text x="66" y="40" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="40" fill="#FFFFFF">WAYWE</text>
+</g>
+<text x="1365" y="660" font-family="Poppins,Arial,sans-serif" font-weight="600" font-size="20" fill="#FFF1E2">Pick &amp; Drop</text>
+<!-- lights -->
+<ellipse cx="848" cy="640" rx="14" ry="18" fill="#FFF6C8" stroke="#B84F05" stroke-width="3"/>
+<rect x="1494" y="610" width="12" height="40" rx="4" fill="#E53935"/>
+<rect x="822" y="700" width="40" height="22" rx="6" fill="#9E9E9E"/>
+<!-- wheels -->
+<g><circle cx="960" cy="760" r="58" fill="#26262B"/><circle cx="960" cy="760" r="28" fill="#BDBDBD"/><circle cx="960" cy="760" r="9" fill="#757575"/></g>
+<g><circle cx="1370" cy="760" r="58" fill="#26262B"/><circle cx="1370" cy="760" r="28" fill="#BDBDBD"/><circle cx="1370" cy="760" r="9" fill="#757575"/></g>
+</svg>

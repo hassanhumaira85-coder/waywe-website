@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waywe | Rides, Car Rentals, Pick &amp; Drop and Women Drivers in Multan</title>
+<meta name="description" content="Waywe: short rides, rental cars, school/college/office van pick &amp; drop, and women-only rides with women drivers in Multan.">
+<link rel="canonical" href="https://mywaywe.com/">
+<meta property="og:url" content="https://mywaywe.com/">
+<meta property="og:title" content="Waywe | Your way, every day">
+<meta property="og:description" content="Rides, rental cars, van pick &amp; drop and women-only rides in Multan.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23F47B20'/%3E%3Cpath d='M18 76 C26 50 36 46 50 49 C62 52 70 48 80 30' stroke='white' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='82' cy='27' r='9' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--o:#F47B20;--o2:#FF9A45;--od:#D9620A;--ink:#1D1D1F;--muted:#6B6B70;--bg:#FFF8F2;--line:#F1E4D8;--w:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--w);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{width:min(1160px,92%);margin:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn-o{background:var(--o);color:#fff;box-shadow:0 10px 24px rgba(244,123,32,.3)}
+.btn-o:hover{background:var(--od);transform:translateY(-2px)}
+.btn-w{background:#fff;color:var(--o);border-color:#fff}
+.btn-w:hover{background:transparent;color:#fff}
+.btn-l{border-color:var(--o);color:var(--o)}
+.btn-l:hover{background:var(--o);color:#fff}
+.tag{display:inline-block;background:#FFE9D6;color:var(--od);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;letter-spacing:.3px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.5px}
+h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:14px 0 12px}
+.lead{color:var(--muted);font-size:17px;max-width:620px}
+section{padding:96px 0}
+.center{text-align:center}.center .lead{margin:auto}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px;color:var(--ink)}
+.brand span{color:var(--o)}
+.brand .bt{font-weight:inherit;white-space:nowrap}
+.menu{display:flex;gap:30px;font-weight:500;font-size:15px}
+.menu a:hover{color:var(--o)}
+.burger{display:none;background:none;border:0;font-size:28px;color:var(--ink);cursor:pointer}
+
+/* hero slider */
+.hero{position:relative;height:min(86vh,720px);min-height:540px;overflow:hidden;background:#1D1D1F;padding:0}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 7s ease}
+.slide.on img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,15,17,.82) 0,rgba(15,15,17,.55) 45%,rgba(15,15,17,.1) 100%),linear-gradient(0deg,rgba(15,15,17,.55),transparent 40%)}
+.slide .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.slide .tag{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(6px);align-self:flex-start}
+.slide .h1like{font-size:clamp(38px,6.4vw,78px);font-weight:800;line-height:1.08;margin:18px 0;max-width:780px;letter-spacing:-1px}
+.slide .h1like mark{background:var(--o);color:#fff;padding:0 .18em;border-radius:.18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.slide.pink .h1like mark{background:#E8578A}
+.slide p{font-size:clamp(16px,1.6vw,19px);max-width:560px;color:rgba(255,255,255,.9);margin-bottom:30px}
+.slide .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.slide.pink .btn-o{background:#E8578A;box-shadow:0 10px 24px rgba(232,87,138,.35)}
+.btn-g{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn-g:hover{background:#fff;color:var(--ink)}
+.h-dots{position:absolute;z-index:5;left:0;right:0;bottom:34px}
+.h-dots .wrap{display:flex;gap:10px;align-items:center}
+.h-dots button{height:6px;width:34px;border:0;border-radius:6px;background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;padding:0}
+.h-dots button.on{width:64px;background:#fff}
+.h-arrows{position:absolute;z-index:5;right:4%;bottom:22px;display:flex;gap:10px}
+.h-arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);background:rgba(0,0,0,.2);color:#fff;font-size:22px;cursor:pointer}
+.h-arrows button:hover{background:var(--o);border-color:var(--o)}
+.slide.illus::after{background:linear-gradient(90deg,rgba(29,29,31,.72) 0,rgba(29,29,31,.45) 38%,rgba(29,29,31,0) 62%)}
+.credit{position:absolute;z-index:3;right:4%;top:14px;font-size:11px;color:rgba(255,255,255,.55)}
+.credit a{text-decoration:underline}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:50px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 24px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(244,123,32,.14);border-color:#FBD3B0}
+.ico{width:58px;height:58px;border-radius:16px;background:var(--o);display:grid;place-items:center;margin-bottom:20px}
+.ico svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+.card .num{position:absolute;top:20px;right:22px;font-weight:800;color:#F6E2D2;font-size:30px}
+.card.pink .ico{background:#E8578A}
+
+/* how */
+.how{background:var(--bg)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.why-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;transition:.25s}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(244,123,32,.12)}
+.why-card .ico{width:52px;height:52px;margin-bottom:16px}
+.why-card .ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-size:18px;margin-bottom:6px}
+.why-card p{color:var(--muted);font-size:14.5px}
+@media(max-width:980px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.step{background:#fff;border-radius:22px;padding:30px;border:1px solid var(--line)}
+.step b{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--o);color:#fff;font-size:18px;margin-bottom:16px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:14.5px}
+
+/* women */
+.women{background:linear-gradient(135deg,var(--o),var(--od));color:#fff;border-radius:32px;padding:64px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.women .tag{background:rgba(255,255,255,.2);color:#fff}
+.women .lead{color:rgba(255,255,255,.9)}
+.women ul{list-style:none;margin:24px 0 30px;display:grid;gap:12px}
+.women li{display:flex;gap:12px;align-items:flex-start}
+.women li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:#fff;color:var(--o);display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:2px}
+.women-badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:26px;padding:34px;text-align:center}
+.women-badge .big{font-size:58px;line-height:1}
+.women-badge h3{font-size:24px;margin:14px 0 6px}
+.women-badge p{opacity:.9;font-size:14.5px}
+
+/* van */
+.van-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.van-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.van-list div{background:var(--bg);border-radius:16px;padding:18px;font-size:14.5px}
+.van-list b{display:block;color:var(--od);margin-bottom:2px}
+.van-art{background:var(--bg);border-radius:30px;padding:40px;display:grid;place-items:center}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .lead{color:#C9C9CE}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;margin-top:10px}
+.c-info a,.c-info div{display:flex;gap:14px;align-items:center;margin-top:18px;font-size:15px}
+.c-info i{width:46px;height:46px;border-radius:14px;background:var(--o);display:grid;place-items:center;font-style:normal;font-size:20px;flex:none}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:32px;display:grid;gap:14px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:15px;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#FFFCF9;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--o)}
+form{position:relative}
+.f-done{background:#ECFDF5;border:1.5px solid #A7F3D0;color:#065F46;border-radius:14px;padding:16px;display:grid;gap:8px;font-size:14px}
+.f-done .btn{justify-content:center;margin-top:4px}
+.f-err{background:#FEF2F2;border:1.5px solid #FECACA;color:#B91C1C;border-radius:12px;padding:12px;font-size:14px}
+#f-btn[disabled]{opacity:.6;cursor:wait}
+footer{background:#141416;color:#9A9AA0;padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.2);z-index:60}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+@media(max-width:980px){
+ .svc-grid{grid-template-columns:1fr 1fr}
+ .women,.van-grid,.c-grid{grid-template-columns:1fr}
+ .women{padding:40px 28px}
+}
+@media(max-width:760px){
+ section{padding:70px 0}
+ .menu{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 4%;gap:16px;border-bottom:1px solid var(--line)}
+ .menu.open{display:flex}
+ .burger{display:block}
+ .nav .btn{display:none}
+ .svc-grid,.steps,.van-list,form .row{grid-template-columns:1fr}
+ .slide::after{background:linear-gradient(0deg,rgba(15,15,17,.92) 0,rgba(15,15,17,.55) 60%,rgba(15,15,17,.25) 100%)}
+ .slide .wrap{justify-content:flex-end;padding-bottom:84px}
+ .h-arrows{display:none}
+ .credit{top:auto;bottom:8px}
+ .slide.illus::after{background:linear-gradient(0deg,rgba(29,29,31,.85) 0,rgba(29,29,31,.4) 55%,rgba(29,29,31,0) 80%)}
+}
+
+.card[data-svc]{cursor:pointer}
+.card .more{display:inline-block;margin-top:14px;color:var(--o);font-weight:600;font-size:14px}
+.card.pink .more{color:#E8578A}
+.modal-bg{position:fixed;inset:0;background:rgba(29,29,31,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:26px;max-width:640px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.25);animation:pop .2s ease}
+@keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+.modal-head{padding:28px 28px 20px;background:linear-gradient(135deg,var(--o),var(--od));color:#fff;border-radius:26px 26px 0 0;position:relative}
+.modal-head.pink{background:linear-gradient(135deg,#E8578A,#C2185B)}
+.modal-head .ico{background:rgba(255,255,255,.2);margin-bottom:14px}
+.modal-head h3{font-size:26px;margin-bottom:6px}
+.modal-head p{opacity:.92;font-size:15px}
+.modal-x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.22);color:#fff;font-size:22px;cursor:pointer}
+.modal-body{padding:24px 28px 28px}
+.modal-body h4{font-size:15px;margin:18px 0 10px;color:var(--ink)}
+.modal-body h4:first-child{margin-top:0}
+.modal-body ul{list-style:none;display:grid;gap:9px}
+.modal-body li{display:flex;gap:10px;font-size:15px;color:#3a3a3d}
+.modal-body li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:#FFE9D6;color:var(--od);display:grid;place-items:center;font-weight:800;font-size:12px;margin-top:1px}
+.steps-mini{counter-reset:s;display:grid;gap:10px}
+.steps-mini div{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#3a3a3d}
+.steps-mini div::before{counter-increment:s;content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--o);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.note{background:var(--bg);border-radius:14px;padding:14px 16px;font-size:14px;color:var(--muted);margin-top:18px}
+.modal-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#home" class="brand" aria-label="Waywe home">
+   <svg width="38" height="38" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#F47B20"/><path d="M18 76 C26 50 36 46 50 49 C62 52 70 48 80 30" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="82" cy="27" r="9" fill="#fff"/></svg>
+   <b class="bt">Way<span>we</span></b>
+  </a>
+  <nav class="menu" id="menu">
+   <a href="#services">Services</a>
+   <a href="#how">How it works</a>
+   <a href="#why">Why Waywe</a>
+   <a href="#women">Women Drivers</a>
+   <a href="#pickdrop">Pick &amp; Drop</a>
+   <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn-o">Book a ride</a>
+  <button class="burger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+ </div>
+</header>
+
+<section class="hero" id="home" aria-roledescription="carousel" aria-label="Waywe services">
+ <div class="slide on" role="group" aria-label="1 of 4">
+  <img src="https://images.unsplash.com/photo-1679202473078-3647d7838805?auto=format&fit=crop&w=1800&q=70" alt="White car driving through a city underpass in Karachi" fetchpriority="high">
+  <div class="wrap">
+   <span class="tag">Short rides · Multan</span>
+   <h1 class="h1like">Quick rides <mark>across Multan</mark></h1>
+   <p>Car, bike or rickshaw. Book in seconds and get where you need to be, at a fair price.</p>
+   <div class="hero-ctas">
+    <button class="btn btn-o" onclick="openSvc('ride')">Book a ride →</button>
+    <a href="#contact" class="btn btn-g">WhatsApp us</a>
+   </div>
+  </div>
+ </div>
+ <div class="slide" role="group" aria-label="2 of 4">
+  <img src="https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5?auto=format&fit=crop&w=1800&q=70" alt="Inside a clean modern car" loading="lazy">
+  <div class="wrap">
+   <span class="tag">Rental cars · Multan</span>
+   <h2 class="h1like">Rent a car, <mark>your way</mark></h2>
+   <p>By the hour, day or week. With a Waywe driver, for city trips or out of town.</p>
+   <div class="hero-ctas">
+    <button class="btn btn-o" onclick="openSvc('rental')">Rent a car →</button>
+    <a href="#contact" class="btn btn-g">WhatsApp us</a>
+   </div>
+  </div>
+ </div>
+ <div class="slide illus" role="group" aria-label="3 of 4">
+  <img src="img/van.svg" style="object-position:right 85%" alt="Illustration: schoolchildren in uniform waving from the orange Waywe school van" loading="lazy">
+  <div class="wrap">
+   <span class="tag">Pick &amp; Drop · Multan</span>
+   <h2 class="h1like">Safe daily <mark>pick &amp; drop</mark></h2>
+   <p>Monthly van service for school, college and office. Same verified driver, on time every day.</p>
+   <div class="hero-ctas">
+    <button class="btn btn-o" onclick="openSvc('pickdrop')">Get a van plan →</button>
+    <a href="#contact" class="btn btn-g">WhatsApp us</a>
+   </div>
+  </div>
+ </div>
+ <div class="slide pink illus" role="group" aria-label="4 of 4">
+  <img src="img/scooty.svg" style="object-position:right 85%" alt="Illustration: woman in dupatta and helmet riding a pink scooty" loading="lazy">
+  <div class="wrap">
+   <span class="tag">Women only · Multan</span>
+   <h2 class="h1like">Women drivers, <mark>for women</mark></h2>
+   <p>Rides only for women, driven by verified women drivers. Ride with peace of mind.</p>
+   <div class="hero-ctas">
+    <button class="btn btn-o" onclick="openSvc('women')">Book a women ride →</button>
+    <a href="#contact" class="btn btn-g">WhatsApp us</a>
+   </div>
+  </div>
+ </div>
+ <div class="h-dots"><div class="wrap" id="hDots"></div></div>
+ <div class="h-arrows"><button aria-label="Previous" onclick="hGo(hIdx-1,1)">‹</button><button aria-label="Next" onclick="hGo(hIdx+1,1)">›</button></div>
+</section>
+
+<section id="services">
+ <div class="wrap center">
+  <span class="tag">Our Services</span>
+  <h2>One app, four ways to move</h2>
+  <p class="lead">Whatever your trip is, Waywe has a safe and affordable option for it.</p>
+  <div class="svc-grid" style="text-align:left">
+   <div class="card" data-svc="ride" role="button" tabindex="0"><span class="num">01</span>
+    <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 17h14M6 17l1.5-6h9L18 17"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/><path d="M9 11V8h6v3"/></svg></div>
+    <h3>Short Rides</h3><p>Quick, affordable rides across the city. Book in the app, get picked up in minutes, pay a fair fare.</p><span class="more">Learn more →</span></div>
+   <div class="card" data-svc="rental" role="button" tabindex="0"><span class="num">02</span>
+    <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="7" rx="2"/><path d="M6 9l2-4h8l2 4"/><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M12 2v3"/></svg></div>
+    <h3>Rental Cars</h3><p>Rent a car by the hour, day or week, for weddings, trips, family visits or business.</p><span class="more">Learn more →</span></div>
+   <div class="card" id="pickdrop-card" data-svc="pickdrop" role="button" tabindex="0"><span class="num">03</span>
+    <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 16V7a2 2 0 0 1 2-2h11l5 5v6H3z"/><path d="M3 11h18M9 5v6"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
+    <h3>School, College &amp; Office Pick &amp; Drop</h3><p>Reliable monthly van service for students and staff. We manage verified van partners for you.</p><span class="more">Learn more →</span></div>
+   <div class="card pink" data-svc="women" role="button" tabindex="0"><span class="num">04</span>
+    <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M12 12v9M9 18h6"/></svg></div>
+    <h3>Women Drivers &amp; Women-only Rides</h3><p>Women in Multan can earn with their scooty, bike or car. Women passengers can choose a woman driver.</p><span class="more">Learn more →</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="how" id="how">
+ <div class="wrap center">
+  <span class="tag">How it works</span>
+  <h2>Book in 3 easy steps</h2>
+  <div class="steps" style="text-align:left">
+   <div class="step"><b>1</b><h3>Choose a service</h3><p>Ride, rental car, van pick &amp; drop or a women-only ride.</p></div>
+   <div class="step"><b>2</b><h3>Set your location</h3><p>Enter pickup and drop-off and see your fare before you book.</p></div>
+   <div class="step"><b>3</b><h3>Ride with confidence</h3><p>A verified driver arrives. Track your trip and travel safely.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap center">
+  <span class="tag">Why Waywe</span>
+  <h2>Why choose Waywe?</h2>
+  <p class="lead">Safety and trust come first, for every ride, every day.</p>
+  <div class="why-grid" style="text-align:left">
+   <div class="why-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <h3>Verified drivers</h3><p>Every driver's CNIC, licence and vehicle papers are checked and approved by our team before their first ride.</p></div>
+   <div class="why-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+    <h3>Live ride tracking</h3><p>Watch your driver on the map in the Waywe app and share your trip with family in one tap.</p></div>
+   <div class="why-card"><div class="ico" style="background:#DC2626"><svg viewBox="0 0 24 24"><path d="M12 4l9 16H3L12 4z"/><path d="M12 10v4M12 17v.5"/></svg></div>
+    <h3>SOS button</h3><p>One tap sends your ride details and location to the Waywe team on WhatsApp, so help is never far.</p></div>
+   <div class="why-card"><div class="ico" style="background:#E8578A"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.2-4.5 3.5-5"/></svg></div>
+    <h3>Women-only rides</h3><p>Women drivers for women passengers, on scooty, bike or car, for peace of mind.</p></div>
+   <div class="why-card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9v.01M18 15v.01"/></svg></div>
+    <h3>Fare confirmed first</h3><p>Your fare is confirmed before the ride starts, so there are no surprises at the end.</p></div>
+   <div class="why-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg></div>
+    <h3>Local support</h3><p>A real team in Multan, ready to help on WhatsApp whenever you need us.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="women">
+ <div class="wrap">
+  <div class="women">
+   <div>
+    <span class="tag">Waywe for Women</span>
+    <h2>Drive, earn and start your career</h2>
+    <p class="lead">We are opening new opportunities for women in Multan. Register your scooty, bike or car with Waywe and start earning on your own schedule.</p>
+    <ul>
+     <li>Women drivers only carry women passengers</li>
+     <li>Use your own scooty, bike or car</li>
+     <li>Flexible hours: work when it suits you</li>
+     <li>Verified passengers and support from our team</li>
+    </ul>
+    <a href="#contact" class="btn btn-w" onclick="setService('Join as a woman driver')">Register as a driver →</a>
+   </div>
+   <div class="women-badge">
+    <div class="big">👩‍🦰</div>
+    <h3>Women-only rides</h3>
+    <p>Women passengers can book a ride with a woman driver, for safer and more comfortable travel.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="pickdrop" style="padding-top:0">
+ <div class="wrap van-grid">
+  <div>
+   <span class="tag">Pick &amp; Drop</span>
+   <h2>Daily van service for school, college &amp; office</h2>
+   <p class="lead">Waywe works as your trusted third party. We connect you with verified van owners, fix the route and timing, and stay in contact so you have peace of mind.</p>
+   <div class="van-list">
+    <div><b>Schools</b>Safe daily trips for kids</div>
+    <div><b>Colleges &amp; Universities</b>On time, every time</div>
+    <div><b>Offices</b>Staff transport made simple</div>
+    <div><b>Monthly plans</b>Clear and fair pricing</div>
+   </div>
+   <a href="#contact" class="btn btn-o" style="margin-top:28px" onclick="setService('School / College / Office Pick & Drop')">Get a van quote →</a>
+  </div>
+  <div class="van-art" aria-hidden="true">
+   <svg viewBox="0 0 220 140" width="100%" style="max-width:380px">
+    <rect x="10" y="30" width="190" height="80" rx="18" fill="#F47B20"/>
+    <path d="M150 30h20l30 35v45h-50z" fill="#D9620A"/>
+    <rect x="25" y="45" width="34" height="26" rx="6" fill="#fff"/><rect x="67" y="45" width="34" height="26" rx="6" fill="#fff"/><rect x="109" y="45" width="34" height="26" rx="6" fill="#fff"/>
+    <path d="M160 45h12l18 22h-30z" fill="#fff"/>
+    <circle cx="55" cy="112" r="16" fill="#1D1D1F"/><circle cx="55" cy="112" r="6" fill="#fff"/>
+    <circle cx="165" cy="112" r="16" fill="#1D1D1F"/><circle cx="165" cy="112" r="6" fill="#fff"/>
+    <text x="30" y="96" font-family="Poppins,sans-serif" font-weight="800" font-size="16" fill="#fff">WAYWE</text>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <span class="tag">Contact us</span>
+  <h2>Let's get you moving</h2>
+  <div class="c-grid">
+   <div class="c-info">
+    <p class="lead">Book a service, ask for a quote or register as a driver. Fill in the form and our team will call or WhatsApp you to confirm.</p>
+    <a href="https://wa.me/923336009190" target="_blank" rel="noopener"><i>💬</i>WhatsApp: +92 333 6009190</a>
+    <div><i>📍</i>Multan, Pakistan</div>
+   </div>
+   <form id="bookForm" onsubmit="return sendBooking(event)">
+    <div class="row">
+     <label>Your name<input id="f-name" required maxlength="80" placeholder="Full name"></label>
+     <label>Phone<input id="f-phone" required inputmode="tel" maxlength="16" placeholder="03xx xxxxxxx"></label>
+    </div>
+    <label>Service
+     <select id="f-service">
+      <option>Short Ride</option>
+      <option>Rental Car</option>
+      <option>School / College / Office Pick &amp; Drop</option>
+      <option>Women-only Ride</option>
+      <option>Join as a woman driver</option>
+     </select>
+    </label>
+    <div class="row" id="f-route">
+     <label>Pickup area<input id="f-pickup" maxlength="200" placeholder="e.g. Gulgasht Colony"></label>
+     <label>Drop-off<input id="f-dropoff" maxlength="200" placeholder="e.g. Cantt"></label>
+    </div>
+    <label id="f-timewrap">When?<input id="f-time" maxlength="80" placeholder="e.g. Today 5 pm / from 1 Dec, monthly"></label>
+    <label>Message (optional)<textarea id="f-msg" rows="3" maxlength="1000" placeholder="Anything else we should know…"></textarea></label>
+    <input id="f-web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+    <button class="btn btn-o" id="f-btn" type="submit" style="justify-content:center">Send booking request →</button>
+    <div id="f-done" class="f-done" hidden>
+     <b>✅ Request received!</b>
+     <span>Our team will call or WhatsApp you shortly<span id="f-donewrap"> on <b id="f-donephone"></b></span>.</span>
+     <a class="btn btn-l" id="f-wa" target="_blank" rel="noopener">Also chat on WhatsApp</a>
+    </div>
+    <div id="f-err" class="f-err" hidden></div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <a href="#home" class="brand" style="color:#fff;font-size:20px">
+   <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#F47B20"/><path d="M18 76 C26 50 36 46 50 49 C62 52 70 48 80 30" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="82" cy="27" r="9" fill="#fff"/></svg>
+   <b class="bt">Way<span>we</span></b></a>
+  <div>© <span id="yr"></span> Waywe. All rights reserved.</div>
+ </div>
+</footer>
+
+
+<div class="modal-bg" id="svcModal" onclick="if(event.target===this)closeSvc()">
+ <div class="modal" role="dialog" aria-modal="true" aria-labelledby="svcTitle">
+  <div class="modal-head" id="svcHead">
+   <button class="modal-x" onclick="closeSvc()" aria-label="Close">×</button>
+   <div class="ico" id="svcIco"></div>
+   <h3 id="svcTitle"></h3>
+   <p id="svcSub"></p>
+  </div>
+  <div class="modal-body" id="svcBody"></div>
+ </div>
+</div>
+
+<a class="wa" href="https://wa.me/923336009190" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.8-2.7-1.1-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+// Change this to your WhatsApp number (92 + number without the first 0)
+var WA_NUMBER = "923336009190";
+document.getElementById('yr').textContent = new Date().getFullYear();
+function setService(x){var s=document.getElementById('f-service');for(var i=0;i<s.options.length;i++){if(s.options[i].text===x){s.selectedIndex=i}}toggleRoute()}
+// Website bookings go straight into the Waywe database (Admin panel -> Website tab)
+var SB_URL = "https://fozijxegxbzfjratzavd.supabase.co";
+var SB_KEY = "sb_publishable_HNLdjacw47n6ydFyFNItWg_MVk_QEbR";
+function v(id){return document.getElementById(id).value.trim()}
+function waText(){
+ return "Assalam o Alaikum Waywe!\nName: "+v('f-name')+"\nPhone: "+v('f-phone')+"\nService: "+v('f-service')+
+  (v('f-pickup')?"\nPickup: "+v('f-pickup'):"")+(v('f-dropoff')?"\nDrop-off: "+v('f-dropoff'):"")+
+  (v('f-time')?"\nWhen: "+v('f-time'):"")+(v('f-msg')?"\nMessage: "+v('f-msg'):"");
+}
+function toggleRoute(){
+ var driver=v('f-service').indexOf('driver')>-1;
+ document.getElementById('f-route').style.display=driver?'none':'';
+ document.getElementById('f-timewrap').style.display=driver?'none':'';
+}
+document.getElementById('f-service').addEventListener('change',toggleRoute);
+function sendBooking(e){e.preventDefault();
+ var err=document.getElementById('f-err'),btn=document.getElementById('f-btn');
+ err.hidden=true;
+ if(v('f-web')){return false;} // bot trap
+ var phone=v('f-phone').replace(/[^0-9+]/g,'');
+ if(phone.replace(/\D/g,'').length<10){err.textContent='Please enter a valid phone number, e.g. 0333 1234567.';err.hidden=false;return false;}
+ btn.disabled=true;btn.textContent='Sending…';
+ fetch(SB_URL+"/rest/v1/web_bookings",{method:"POST",
+  headers:{"apikey":SB_KEY,"Authorization":"Bearer "+SB_KEY,"Content-Type":"application/json","Prefer":"return=minimal"},
+  body:JSON.stringify({name:v('f-name'),phone:phone,service:v('f-service'),
+   pickup:v('f-pickup')||null,dropoff:v('f-dropoff')||null,ride_time:v('f-time')||null,message:v('f-msg')||null})
+ }).then(function(r){
+  if(!r.ok) throw new Error('save failed '+r.status);
+  document.getElementById('f-donephone').textContent=phone;
+  document.getElementById('f-wa').href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(waText());
+  document.getElementById('f-done').hidden=false;
+  btn.hidden=true;
+ }).catch(function(){
+  err.innerHTML='Could not send right now. Please <a style="color:#B91C1C;font-weight:700" target="_blank" rel="noopener" href="https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(waText())+'">send it on WhatsApp</a> instead.';
+  err.hidden=false;btn.disabled=false;btn.textContent='Send booking request →';
+ });
+ return false;}
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')})});
+
+var SVC={
+ ride:{title:"Short Rides",sub:"Quick, affordable rides across Multan, whenever you need them.",pink:false,
+  what:["Rides with verified drivers using their own bike, rickshaw or car","Book instantly or schedule a ride for later","See your fare before you confirm","Every ride is live-tracked by Waywe for your safety"],
+  how:["Choose Short Ride and enter pickup and drop-off","Pick your vehicle: bike, rickshaw, car or AC car","A nearby driver accepts and comes to you","Track your driver, share your ride with family, and pay the driver"],
+  who:"Students, office workers, shoppers – anyone who needs a quick trip in the city.",
+  book:"Short Ride",btn:"Book a ride"},
+ rental:{title:"Rental Cars",sub:"Waywe cars with a trained Waywe driver, by the hour, day or week.",pink:false,
+  what:["Clean, well-maintained cars owned by Waywe","Every rental comes with a trained, verified Waywe driver","Hourly, daily or weekly plans","Ideal for weddings, family trips, airport runs, guests and business"],
+  how:["Choose Rental Car and tell us where to bring the car","Pick the car type and your plan (hourly, daily or weekly)","Our team confirms the car, driver and price with you","The car arrives with your driver at the time you chose"],
+  who:"Families, wedding events, visiting guests, businesses and anyone travelling outside the city.",
+  book:"Rental Car",btn:"Request a rental car"},
+ pickdrop:{title:"School, College & Office Pick & Drop",sub:"Safe, reliable daily van service – Waywe manages it all for you.",pink:false,
+  what:["Daily pickup from home and drop at school, college, university or office","Verified van owners and drivers, managed by Waywe as a trusted third party","Fixed route and timing, morning, evening or both ways","Simple monthly plans, and parents can track the van during the trip"],
+  how:["Tell us the home area, institution or office and timings","We match you with a verified van on a suitable route","You agree the monthly plan with us","The van starts – Waywe stays your point of contact for any issue"],
+  who:"Parents of school children, college and university students, and office staff.",
+  book:"School / College / Office Pick & Drop",btn:"Get a van quote"},
+ women:{title:"Women Drivers & Women-only Rides",sub:"Rides by women, for women – and a new career for women in Multan.",pink:true,
+  what:["Women passengers can book a ride with a woman driver","Women drivers only carry women passengers on these rides","Women in Multan can register their own scooty, bike or car and start earning","Flexible hours – work when it suits you, with support from the Waywe team"],
+  how:["Passengers: choose Women-only Ride in the app and book","Drivers: register with your CNIC, licence and vehicle details","The Waywe team verifies and approves your account","Go online and start accepting women-only rides"],
+  who:"Women who prefer a woman driver – and women who want to earn and build a career.",
+  book:"Women-only Ride",btn:"Book a women-only ride", extra:"Join as a woman driver"}
+};
+function openSvc(id){
+ var d=SVC[id]; if(!d) return;
+ var card=document.querySelector('.card[data-svc="'+id+'"]');
+ document.getElementById('svcIco').innerHTML=card?card.querySelector('.ico').innerHTML:'';
+ document.getElementById('svcTitle').textContent=d.title;
+ document.getElementById('svcSub').textContent=d.sub;
+ document.getElementById('svcHead').className='modal-head'+(d.pink?' pink':'');
+ var li=function(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')};
+ var st=function(a){return a.map(function(x){return '<div>'+x+'</div>'}).join('')};
+ var h='<h4>What you get</h4><ul>'+li(d.what)+'</ul>'+
+  '<h4>How it works</h4><div class="steps-mini">'+st(d.how)+'</div>'+
+  '<div class="note"><b>Who is it for?</b> '+d.who+'<br>Fares are confirmed by Waywe before your ride.</div>'+
+  '<div class="modal-cta"><a class="btn btn-o" href="#contact" onclick="closeSvc();setService(\''+d.book+'\')">'+d.btn+' →</a>'+
+  (d.extra?'<a class="btn btn-l" href="#contact" onclick="closeSvc();setService(\''+d.extra+'\')">Register as a driver</a>':'')+
+  '<a class="btn btn-l" target="_blank" rel="noopener" href="https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent('Assalam o Alaikum Waywe! I would like to know more about '+d.title+'.')+'">Ask on WhatsApp</a></div>';
+ document.getElementById('svcBody').innerHTML=h;
+ document.getElementById('svcModal').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function closeSvc(){document.getElementById('svcModal').classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.card[data-svc]').forEach(function(c){
+ c.addEventListener('click',function(){openSvc(c.getAttribute('data-svc'))});
+ c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openSvc(c.getAttribute('data-svc'))}});
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSvc()});
+</script>
+<script>
+(function(){
+ var sl=[].slice.call(document.querySelectorAll('.hero .slide')),d=document.getElementById('hDots'),t;
+ window.hIdx=0;
+ sl.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Slide '+(i+1));b.onclick=function(){hGo(i,1)};d.appendChild(b)});
+ var dots=[].slice.call(d.children);
+ window.hGo=function(i,user){hIdx=(i+sl.length)%sl.length;sl.forEach(function(s,j){s.classList.toggle('on',j===hIdx)});dots.forEach(function(b,j){b.classList.toggle('on',j===hIdx)});if(user)start()};
+ function start(){clearInterval(t);t=setInterval(function(){hGo(hIdx+1)},5500)}
+ var h=document.querySelector('.hero'),x0=null;
+ h.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+ h.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)hGo(hIdx+(dx<0?1:-1),1);x0=null});
+ h.addEventListener('mouseenter',function(){clearInterval(t)});h.addEventListener('mouseleave',start);
+ hGo(0);start();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD0E0"/><stop offset=".75" stop-color="#FFF0E6"/></linearGradient>
+ <linearGradient id="pink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7A1C0"/><stop offset="1" stop-color="#E8578A"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1420" cy="160" r="90" fill="#FFC1A1" opacity=".8"/>
+<g fill="#FFFFFF" opacity=".75"><ellipse cx="260" cy="130" rx="110" ry="28"/><ellipse cx="330" cy="112" rx="70" ry="32"/><ellipse cx="900" cy="100" rx="120" ry="28"/></g>
+<!-- wall with bougainvillea -->
+<rect x="0" y="420" width="1600" height="280" fill="#F6D2B8"/>
+<rect x="0" y="420" width="1600" height="22" fill="#E9B894"/>
+<g fill="#E8A57C" opacity=".6"><rect x="300" y="442" width="10" height="258"/><rect x="700" y="442" width="10" height="258"/><rect x="1100" y="442" width="10" height="258"/><rect x="1500" y="442" width="10" height="258"/></g>
+<rect x="420" y="480" width="180" height="220" rx="90" fill="#3E7E74"/><rect x="434" y="494" width="152" height="206" rx="76" fill="#4E9488"/>
+<g>
+ <g fill="#5E9C52"><circle cx="80" cy="420" r="80"/><circle cx="200" cy="400" r="70"/><circle cx="330" cy="430" r="60"/><circle cx="760" cy="410" r="75"/><circle cx="880" cy="425" r="60"/><circle cx="1180" cy="405" r="80"/><circle cx="1320" cy="420" r="62"/><circle cx="1500" cy="410" r="80"/></g>
+ <g fill="#E8578A"><circle cx="60" cy="390" r="14"/><circle cx="120" cy="440" r="12"/><circle cx="190" cy="370" r="13"/><circle cx="250" cy="420" r="11"/><circle cx="320" cy="400" r="12"/><circle cx="740" cy="380" r="14"/><circle cx="800" cy="430" r="12"/><circle cx="870" cy="400" r="12"/><circle cx="1150" cy="380" r="14"/><circle cx="1210" cy="430" r="12"/><circle cx="1300" cy="395" r="13"/><circle cx="1470" cy="380" r="14"/><circle cx="1530" cy="430" r="12"/></g>
+ <g fill="#FF8FB3"><circle cx="150" cy="410" r="10"/><circle cx="220" cy="445" r="9"/><circle cx="780" cy="400" r="10"/><circle cx="1240" cy="400" r="10"/><circle cx="1350" cy="440" r="9"/><circle cx="1500" cy="440" r="10"/></g>
+ <g fill="#F47B20"><circle cx="100" cy="455" r="8"/><circle cx="840" cy="445" r="8"/><circle cx="1260" cy="445" r="8"/></g>
+</g>
+<!-- ground -->
+<rect y="690" width="1600" height="26" fill="#E9D5C2"/><rect y="716" width="1600" height="184" fill="#5A5A63"/>
+<g fill="#FFFFFF" opacity=".8"><rect x="40" y="820" width="120" height="10" rx="5"/><rect x="260" y="820" width="120" height="10" rx="5"/><rect x="480" y="820" width="120" height="10" rx="5"/><rect x="700" y="820" width="120" height="10" rx="5"/><rect x="920" y="820" width="120" height="10" rx="5"/><rect x="1140" y="820" width="120" height="10" rx="5"/><rect x="1360" y="820" width="120" height="10" rx="5"/></g>
+<!-- speed lines -->
+<g stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity=".7"><path d="M1440 600 h90"/><path d="M1460 640 h110"/><path d="M1430 680 h70"/></g>
+<ellipse cx="1110" cy="805" rx="270" ry="18" fill="#000" opacity=".25"/>
+<!-- rear wheel -->
+<g><circle cx="1290" cy="770" r="56" fill="#26262B"/><circle cx="1290" cy="770" r="26" fill="#C9C9C9"/><circle cx="1290" cy="770" r="8" fill="#777"/></g>
+<!-- front wheel -->
+<g><circle cx="905" cy="770" r="56" fill="#26262B"/><circle cx="905" cy="770" r="26" fill="#C9C9C9"/><circle cx="905" cy="770" r="8" fill="#777"/></g>
+<!-- scooty body (facing left) -->
+<path d="M1110 640 Q1150 590 1250 592 Q1350 596 1370 660 Q1385 720 1340 740 L1180 742 Q1150 742 1140 715 Z" fill="url(#pink)" stroke="#B83A68" stroke-width="4"/>
+<path d="M1045 735 L1160 735 L1165 700 L1050 700 Z" fill="#B83A68"/>
+<!-- front apron / leg shield -->
+<path d="M950 470 Q930 520 930 600 Q930 690 905 714 L960 714 Q1010 640 1010 560 Q1012 500 990 470 Z" fill="url(#pink)" stroke="#B83A68" stroke-width="4"/>
+<path d="M905 714 Q900 770 905 770" stroke="#B83A68" stroke-width="6"/>
+<path d="M880 720 Q905 690 940 720" fill="url(#pink)" stroke="#B83A68" stroke-width="4"/>
+<path d="M990 700 L1070 700 L1060 735 L975 735 Z" fill="#E8578A" stroke="#B83A68" stroke-width="3"/>
+<!-- headlight + handle -->
+<path d="M930 440 Q960 420 995 440 L990 470 L950 470 Z" fill="#F7A1C0" stroke="#B83A68" stroke-width="4"/>
+<ellipse cx="925" cy="455" rx="16" ry="20" fill="#FFF6C8" stroke="#B83A68" stroke-width="3"/>
+<path d="M960 430 L1040 420" stroke="#2B2B2B" stroke-width="10" stroke-linecap="round"/>
+<path d="M975 425 L960 380" stroke="#9E9E9E" stroke-width="5"/><ellipse cx="958" cy="372" rx="18" ry="12" fill="#CFD8DC" stroke="#78909C" stroke-width="3"/>
+<!-- seat -->
+<path d="M1120 600 Q1200 568 1310 585 Q1320 600 1300 606 L1130 612 Z" fill="#2B2B2B"/>
+<!-- rider -->
+<!-- shalwar leg -->
+<path d="M1150 600 Q1080 610 1030 650 L1010 700 L1055 702 L1070 668 Q1110 650 1170 650 Z" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
+<path d="M1000 700 q0 -14 22 -14 h40 q8 0 8 14z" fill="#E8578A"/>
+<!-- kameez body -->
+<path d="M1110 450 Q1170 440 1200 480 Q1230 540 1230 610 Q1180 628 1120 620 Q1090 560 1100 480 Z" fill="#F47B20"/>
+<path d="M1120 620 Q1100 600 1105 560" stroke="#D9620A" stroke-width="4" fill="none"/>
+<g fill="#FFFFFF" opacity=".55"><circle cx="1150" cy="500" r="5"/><circle cx="1180" cy="530" r="5"/><circle cx="1140" cy="560" r="5"/><circle cx="1195" cy="585" r="5"/><circle cx="1160" cy="600" r="5"/></g>
+<!-- dupatta flowing back -->
+<path d="M1150 430 Q1220 430 1260 470 Q1330 500 1420 470 Q1380 520 1300 535 Q1240 540 1205 505 Z" fill="#E8578A" opacity=".95"/>
+<path d="M1300 535 Q1360 540 1430 520 Q1390 560 1320 560 Z" fill="#F7A1C0"/>
+<!-- arm -->
+<path d="M1130 470 Q1090 470 1045 430" stroke="#F47B20" stroke-width="30" stroke-linecap="round" fill="none"/>
+<circle cx="1040" cy="425" r="15" fill="#C68A5E"/>
+<!-- neck/head -->
+<rect x="1135" y="398" width="26" height="36" rx="10" fill="#C68A5E"/>
+<circle cx="1145" cy="372" r="42" fill="#C68A5E"/>
+<!-- hair -->
+<path d="M1150 340 Q1205 345 1200 405 Q1196 440 1220 470 Q1180 470 1170 430 Z" fill="#2B1B12"/>
+<!-- helmet -->
+<path d="M1095 368 Q1092 312 1150 306 Q1210 306 1212 368 Q1200 360 1150 358 Q1110 358 1095 368 Z" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="3"/>
+<path d="M1100 352 Q1150 340 1205 352" stroke="#E8578A" stroke-width="7" fill="none"/>
+<path d="M1110 372 Q1130 410 1150 414" stroke="#D0D0D0" stroke-width="4" fill="none"/>
+<!-- face -->
+<circle cx="1118" cy="380" r="4" fill="#1D1D1F"/>
+<path d="M1108 396 q8 8 18 2" stroke="#7A3B1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="1128" cy="390" r="7" fill="#E8909A" opacity=".5"/>
+<!-- dupatta over shoulder -->
+<path d="M1120 432 Q1150 420 1185 440 Q1170 470 1140 470 Q1118 460 1120 432 Z" fill="#E8578A"/>
+<!-- small WAYWE badge on scooty -->
+<g transform="translate(1235 640)"><rect width="34" height="34" rx="9" fill="#FFFFFF"/><path d="M6 26 C9 17 13 16 17 16 C21 17 24 16 27 10" stroke="#F47B20" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle cx="28" cy="9" r="3.5" fill="#F47B20"/></g>
+</svg>
