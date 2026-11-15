@@ -259,3 +259,8 @@ main.one{height:calc(100vh - 73px);height:calc(100dvh - 73px);display:flex;flex-
  .one-text .ctas{justify-content:center;margin-top:12px}
  .one-text .btn{padding:11px 18px;font-size:14px}
 }
+
+/* v11: service page = only the picture, full screen */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+main.one.only{display:flex;align-items:center;justify-content:center;background:#fff;padding:0}
+main.one.only img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
