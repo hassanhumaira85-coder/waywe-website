@@ -190,3 +190,16 @@ footer a:hover{color:#fff}
 .svc-list li:before{content:"✓";position:absolute;left:0;top:7px;width:20px;height:20px;border-radius:50%;color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
 .s-blue .svc-list li:before{background:#2563EB}.s-green .svc-list li:before{background:#16A34A}.s-purple .svc-list li:before{background:#7C3AED}
 .s-blue .svc-links a{color:#1D4ED8}.s-green .svc-links a{color:#15803D}.s-purple .svc-links a{color:#6D28D9}
+
+/* v8: brother's designed pictures, shown at their real size (never stretched) */
+.s-art.photo img{aspect-ratio:auto;object-fit:contain;width:100%;max-width:640px;margin:auto;border-radius:24px;background:#fff}
+.s-art.photo.sq img{max-width:520px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;justify-items:center}
+.card-svc{width:100%;max-width:350px;display:flex;flex-direction:column}
+.card-svc img{width:100%;height:auto;border-radius:22px;box-shadow:0 18px 40px rgba(0,0,0,.10);transition:.25s}
+.card-svc a:hover img{transform:translateY(-4px);box-shadow:0 26px 50px rgba(0,0,0,.14)}
+.card-links{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:14px 6px 0}
+.card-links a{font-weight:600;color:var(--od);font-size:14.5px}
+.p-hero-art.card{display:flex;justify-content:center}
+.p-hero-art.card img{width:auto;max-width:350px;max-height:614px;aspect-ratio:auto;object-fit:contain;border-radius:24px}
+@media(max-width:900px){.card-grid{grid-template-columns:1fr}}
