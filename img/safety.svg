@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC48C"/><stop offset="1" stop-color="#FFF1E2"/></linearGradient>
+<radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF7EA"/><stop offset="1" stop-color="#FFF7EA" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="900" fill="url(#sk)"/>
+<circle cx="936.0" cy="234.0" r="270.0" fill="url(#sun)"/>
+<circle cx="936.0" cy="234.0" r="72.0" fill="#FFF3DF"/>
+<g transform="translate(0,258.0)" opacity=".55"><g fill="#F59E5B">
+<g >
+ 
+ <rect x="0" y="200" width="70" height="100"/><rect x="62" y="170" width="54" height="130"/><rect x="110" y="215" width="60" height="85"/>
+ 
+ <rect x="182" y="170" width="7" height="130" rx="3"/>
+ <path d="M185 172 q-40 -10 -60 18 q30 -14 60 -12z M185 172 q40 -10 60 18 q-30 -14 -60 -12z M185 172 q-24 -30 -52 -26 q28 6 52 30z M185 172 q24 -30 52 -26 q-28 6 -52 30z"/>
+ 
+ <rect x="230" y="190" width="170" height="110"/>
+ <rect x="252" y="150" width="126" height="44"/>
+ <path d="M262 152 Q262 78 315 70 Q368 78 368 152 Z"/>
+ <rect x="312" y="44" width="6" height="28"/><circle cx="315" cy="42" r="6"/>
+ <rect x="222" y="160" width="16" height="140"/><path d="M222 162 q8 -22 16 0z"/>
+ <rect x="392" y="160" width="16" height="140"/><path d="M392 162 q8 -22 16 0z"/>
+ <rect x="244" y="132" width="12" height="22"/><path d="M244 134 q6 -14 12 0z"/>
+ <rect x="374" y="132" width="12" height="22"/><path d="M374 134 q6 -14 12 0z"/>
+ 
+ <rect x="420" y="210" width="80" height="90"/><rect x="495" y="185" width="46" height="115"/>
+ 
+ <rect x="560" y="200" width="120" height="100"/>
+ <rect x="596" y="110" width="48" height="94"/>
+ <path d="M590 112 L620 74 L650 112 Z"/>
+ <rect x="617" y="56" width="6" height="20"/>
+ <rect x="552" y="190" width="136" height="12" rx="3"/>
+ 
+ <rect x="700" y="215" width="110" height="85"/>
+ <path d="M720 217 Q720 168 755 162 Q790 168 790 217 Z"/>
+ <rect x="752" y="146" width="5" height="18"/>
+ <rect x="694" y="140" width="12" height="160"/><path d="M694 142 q6 -22 12 0z"/>
+ <rect x="804" y="140" width="12" height="160"/><path d="M804 142 q6 -22 12 0z"/>
+ 
+ <rect x="846" y="160" width="7" height="140" rx="3"/>
+ <path d="M849 162 q-40 -10 -60 18 q30 -14 60 -12z M849 162 q40 -10 60 18 q-30 -14 -60 -12z M849 162 q-24 -30 -52 -26 q28 6 52 30z M849 162 q24 -30 52 -26 q-28 6 -52 30z"/>
+ 
+ <rect x="890" y="150" width="70" height="150"/><rect x="955" y="195" width="60" height="105"/>
+ <rect x="1010" y="170" width="52" height="130"/><rect x="1058" y="220" width="70" height="80"/>
+ <rect x="1122" y="185" width="78" height="115"/>
+</g>
+
+<g fill="#000" fill-opacity="0">
+</g>
+</g></g>
+<g transform="translate(470,470)"><rect x="-170" y="-320" width="340" height="640" rx="48" fill="#1D1D1F"/><rect x="-150" y="-298" width="300" height="596" rx="34" fill="#EEF1EA"/>
+<g fill="#E3E7DE"><rect x="-140" y="-280" width="120" height="150" rx="10"/><rect x="0" y="-280" width="140" height="110" rx="10"/><rect x="-140" y="-100" width="100" height="180" rx="10"/><rect x="-10" y="-140" width="150" height="160" rx="10"/><rect x="-140" y="110" width="140" height="160" rx="10"/><rect x="30" y="60" width="110" height="210" rx="10"/></g>
+<path d="M-90 230 L-90 60 L-20 40 L40 -60 L90 -200" stroke="#F47B20" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="-90" cy="230" r="16" fill="#F47B20"/><path d="M90 -200 C70 -228 70 -256 90 -256 C110 -256 110 -228 90 -200Z" fill="#1D1D1F"/></g>
+<g transform="translate(830,420)"><path d="M0 -190 L160 -130 L160 10 C160 120 80 190 0 220 C-80 190 -160 120 -160 10 L-160 -130Z" fill="#F47B20"/>
+<path d="M0 -150 L120 -105 L120 10 C120 95 60 150 0 175 C-60 150 -120 95 -120 10 L-120 -105Z" fill="#fff" opacity=".18"/>
+<path d="M-60 10 L-15 55 L70 -40" stroke="#fff" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(1030,720)"><rect x="-80" y="-40" width="160" height="80" rx="40" fill="#DC2626"/><text x="0" y="14" font-family="Poppins,Arial" font-size="40" font-weight="800" fill="#fff" text-anchor="middle">SOS</text></g></svg>
