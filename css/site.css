@@ -237,8 +237,11 @@ footer a:hover{color:#fff}
 .city-info .cap{text-transform:uppercase;letter-spacing:1.5px;color:#6B6B70;font-size:13px;font-weight:600;margin:26px 0 8px}
 .launch{font-size:clamp(38px,5vw,58px);font-weight:800;letter-spacing:-1.5px;line-height:1}
 .city-main{display:inline-block;background:#FFC72C;border-radius:999px;padding:12px 26px;font-weight:700;font-size:19px}
-.city-next{display:flex;flex-wrap:wrap;gap:10px}
-.city-next span{border:1.5px solid #D9D6CE;border-radius:999px;padding:9px 20px;font-weight:500;background:#fff}
+.city-next{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:440px}
+.cn{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 8px 22px rgba(0,0,0,.06);border:1px solid #EFE7DC}
+.cn svg{grid-row:1/3;width:34px;height:34px;padding:6px;background:var(--ot);border-radius:12px}
+.cn b{font-size:17px;font-weight:700;line-height:1.2}
+.cn small{font-size:12px;color:var(--muted);font-weight:500}
 @media(max-width:860px){.city-grid{grid-template-columns:1fr;gap:30px}}
 
 /* v10: home cards = pictures only; single-screen service pages */
@@ -273,3 +276,28 @@ main.one{height:calc(100vh - 73px);height:calc(100dvh - 73px);display:flex;flex-
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 main.one.only{display:flex;align-items:center;justify-content:center;background:#fff;padding:0}
 main.one.only img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+
+/* one-screen service page */
+main.svc1{height:calc(100vh - 73px);height:calc(100dvh - 73px);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1180px;margin:0 auto;padding:28px 4%;box-sizing:border-box;overflow:hidden}
+.svc1-pic{position:relative;height:100%;max-height:620px;border-radius:28px;overflow:hidden;order:2;box-shadow:0 24px 50px rgba(0,0,0,.12)}
+.svc1-pic img{width:100%;height:100%;object-fit:cover;display:block}
+.svc1-badge{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.95);color:var(--ink);font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.svc1-tag{color:var(--od);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1.4px;margin:0 0 6px}
+.svc1 h1{font-size:clamp(28px,4.2vw,54px);line-height:1.08;margin:0 0 10px;letter-spacing:-.5px}
+.svc1-sub{color:var(--muted);font-size:clamp(15px,1.5vw,18px);margin:0 0 20px;line-height:1.45}
+.svc1-list{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc1-list li{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;line-height:1.25}
+.fi{flex:none;width:42px;height:42px;border-radius:13px;background:var(--ot);color:var(--o);display:flex;align-items:center;justify-content:center}
+.svc1-cta{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){
+ main.svc1{display:flex;flex-direction:column;gap:14px;padding:14px 4% 16px;align-items:stretch}
+ .svc1-pic{order:0;flex:1 1 auto;min-height:120px;max-height:none;border-radius:22px}
+ .svc1-txt{flex:none}
+ .svc1-tag{font-size:12px;margin-bottom:2px}
+ .svc1 h1{font-size:27px;margin-bottom:4px}
+ .svc1-sub{font-size:14px;margin-bottom:12px}
+ .svc1-list{gap:9px 10px;margin-bottom:14px}
+ .svc1-list li{font-size:13px;gap:8px}
+ .fi{width:34px;height:34px;border-radius:10px}.fi svg{width:18px;height:18px}
+ .svc1-cta .btn{padding:12px 18px;font-size:14px;flex:1;justify-content:center}
+}
