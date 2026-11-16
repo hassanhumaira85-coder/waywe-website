@@ -202,7 +202,16 @@ footer a:hover{color:#fff}
 .card-links a{font-weight:600;color:var(--od);font-size:14.5px}
 .p-hero-art.card{display:flex;justify-content:center}
 .p-hero-art.card img{width:auto;max-width:350px;max-height:614px;aspect-ratio:auto;object-fit:contain;border-radius:24px}
-@media(max-width:900px){.card-grid{grid-template-columns:1fr}}
+.swipe-hint{display:none}
+@media(max-width:900px){
+ #services{padding-top:28px;padding-bottom:28px}
+ #services .sec-title{margin-bottom:12px}
+ .card-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;justify-content:flex-start;padding:4px 4% 18px;margin:0 -4%;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .card-grid::-webkit-scrollbar{display:none}
+ .card-pic{flex:0 0 auto;max-width:none;width:min(84vw,calc((100svh - 230px) * .5666),360px);scroll-snap-align:center}
+ .card-pic img{width:100%;height:auto}
+ .swipe-hint{display:block;text-align:center;font-size:14px;font-weight:600;color:var(--o);margin:4px 0 0}
+}
 
 /* v9: service cards built in code (sharp text & icons), styled like the reference cards */
 .bcard{display:flex;flex-direction:column;align-items:center;text-align:center;border-radius:26px;overflow:hidden;
